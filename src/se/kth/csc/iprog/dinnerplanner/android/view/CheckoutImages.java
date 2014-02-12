@@ -13,10 +13,12 @@ import android.widget.ImageView;
 import android.net.Uri;
 import android.app.Dialog;
 
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Set;
 import java.util.HashSet;
 
-public class CheckoutImages {
+public class CheckoutImages implements Observer{
 
     View view;
     DinnerModel model;
@@ -29,6 +31,7 @@ public class CheckoutImages {
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
+        model.addObserver(this);
         //getSelectedDishes = model.getSelectedDishes(); FIX THIS LATER!
 
         result2 = model.getFullMenu();
@@ -58,4 +61,8 @@ public class CheckoutImages {
         // Setup the rest of the view layout
     }
 
+    @Override
+    public void update(Observable observable, Object o) {
+
+    }
 }

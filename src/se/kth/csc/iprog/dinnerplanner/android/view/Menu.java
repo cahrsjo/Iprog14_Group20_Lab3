@@ -6,13 +6,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.HashSet;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Set;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
 
-public class Menu {
+public class Menu implements Observer{
     DinnerModel model;
     View view;
     String imageFileName;
@@ -30,6 +32,7 @@ public class Menu {
     public Menu(View view, DinnerModel model){
         this.view = view;
         this.model = model;
+        model.addObserver(this);
 
         //Get all dishes
         starters = model.getDishesOfType(1);
@@ -56,14 +59,25 @@ public class Menu {
             //Create new verticalLayout as container to the image and text
             verticalLayout = new LinearLayout(view.getContext());
             verticalLayout.setOrientation(LinearLayout.VERTICAL);
+
+            /**We tried to alter the image sizes with these two lines but it doesn't work...**/
+            //LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(150, 100);
+            //verticalLayout.setLayoutParams(layoutParams);
+
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)layout.getLayoutParams();
             params.setMargins(10, 10, 10, 10);
+
+            //params.height = 300;
+
             verticalLayout.setLayoutParams(params);
 
             //Create new ImageView and fill it with the picture from getImage above
             image = new ImageView(view.getContext());
             int resID = view.getResources().getIdentifier(imageFileName, "drawable", view.getContext().getPackageName());
             image.setImageResource(resID);
+
+
+
             verticalLayout.addView(image);
 
             //Create new TextView and fill it with the picture's text
@@ -73,6 +87,12 @@ public class Menu {
 
             //Add the view to the correct layout
             layout.addView(verticalLayout);
+
         }
+    }
+
+    @Override
+    public void update(Observable observable, Object o) {
+
     }
 }

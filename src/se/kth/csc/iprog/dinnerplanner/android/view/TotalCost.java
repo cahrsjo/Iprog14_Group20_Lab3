@@ -8,17 +8,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.util.HashSet;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Set;
 
-public class TotalCost {
+public class TotalCost implements Observer {
 
-    /**
-     Things I added:
-     DinnerModel model;
-     public TotalCost(View view, DinnerModel model)
-     this.model = model;
-     totalcost.setText("Total cost " + model.getTotalMenuPrice() + " kr");
-     **/
+
     //DinnerModel dynamicPrice = new DinnerModel();
     View view;
     DinnerModel model;
@@ -28,6 +24,7 @@ public class TotalCost {
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
+        model.addObserver(this);
         getTheMenu = model.getFullMenu();
 
         TextView totalcost = (TextView) view.findViewById(R.id.display_total_cost);
@@ -39,4 +36,8 @@ public class TotalCost {
         // Setup the rest of the view layout
     }
 
+    @Override
+    public void update(Observable observable, Object o) {
+
+    }
 }

@@ -1,10 +1,11 @@
 package se.kth.csc.iprog.dinnerplanner.model;
 
 import java.util.HashSet;
+import java.util.Observable;
 import java.util.Set;
 
-public class DinnerModel implements IDinnerModel { /****/
-    private int numberOfGuests=1;
+public class DinnerModel extends Observable implements IDinnerModel { /****/
+    private int numberOfGuests;
     private Set<Dish> selectedDishes = new HashSet<Dish>();
     private Set<Ingredient> ingredients;
     private float totalPrice;
@@ -135,11 +136,10 @@ public class DinnerModel implements IDinnerModel { /****/
     @Override
     public void setNumberOfGuests(int numberOfGuests) {
         this.numberOfGuests = numberOfGuests;
+        setChanged();
+        notifyObservers(numberOfGuests);
     }
 
-    /**you don't need a Dish type variable, but the method getSelectedDish(type)
-    should go through all the dishes in the "selectedDishes" (see previous point)
-    and find the one of the provided type**/
     public Dish getSelectedDish(int type) {
         Set<Dish> result2 = new HashSet<Dish>();
         for (Dish d : selectedDishes){
@@ -152,26 +152,18 @@ public class DinnerModel implements IDinnerModel { /****/
         return (Dish) result2; /**KORREKT?**/
     }
 
+
+
     @Override
     public Set<Dish> getFullMenu() {
 
-        /**if (selectedDishes.isEmpty()){
-            Dish dish1 = new Dish("French toast",Dish.STARTER,"toast.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
-            selectedDishes.add(dish1);
-            Dish dish2 = new Dish("Meat balls",Dish.MAIN,"meatballs.jpg","Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
-            selectedDishes.add(dish2);
-            Dish dish3 = new Dish("Ice cream",Dish.DESERT,"icecream.jpg","Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
-            selectedDishes.add(dish3);
-        }**/
         selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
 
         return this.selectedDishes;
 
     }
 
-    /**you don't need ingredients variable, but the method should go through all the
-    selectedDishes (each dish has a method getIngredients()) and get their ingredients
-    and collect them in one list and return that one list**/
+
     public Set<Ingredient> getAllIngredients() {
         Set<Ingredient> result3 = new HashSet<Ingredient>();
 
@@ -182,28 +174,13 @@ public class DinnerModel implements IDinnerModel { /****/
             }
 
         }
-        /**if (selectedDishes.isEmpty()){
-            Ingredient dish2ing9 = new Ingredient("milk",20,"ml",4);
-            result3.add(dish2ing9);
-            Ingredient dish2ing10 = new Ingredient("beef",20,"ml",4);
-            result3.add(dish2ing10);
-        }**/
-
-
-
 
         return result3; /**KORREKT?**/
     }
 
-/**the same is true for the total price, you first iterate over all the
-    ingredients (that you can get with previous method) and then you sum their price.
-    the sum of all the prices of all ingredients you then multiply by number of guest**/
+
     @Override
     public float getTotalMenuPrice() {
-
-        /**if (selectedDishes.isEmpty()){
-            totalPrice = 1337;
-        }**/
 
             for (Dish d : selectedDishes){
                 for (Ingredient i : d.getIngredients()){

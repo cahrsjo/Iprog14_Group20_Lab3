@@ -6,7 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class BtnNext {
+import java.util.Observable;
+import java.util.Observer;
+
+public class BtnNext implements Observer{
 
     View view;
     DinnerModel model;
@@ -17,10 +20,15 @@ public class BtnNext {
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
+        model.addObserver(this);
         nextButton = (Button) view.findViewById(R.id.next_Button);
         nextButton.setText("Create");
 
     }
 
 
+    @Override
+    public void update(Observable observable, Object o) {
+
+    }
 }

@@ -12,5 +12,24 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/welcome" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/minusButton"
+        android:layout_below="@+id/example_text"
+        android:layout_alignLeft="@+id/example_text"
+        android:layout_alignStart="@+id/example_text"
+        android:layout_marginTop="142dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/plusButton"
+        android:layout_alignTop="@+id/minusButton"
+        android:layout_alignRight="@+id/example_text"
+        android:layout_alignEnd="@+id/example_text" />
+
 
 </RelativeLayout>

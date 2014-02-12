@@ -8,10 +8,12 @@ import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Set;
 import java.util.HashSet;
 
-public class CourseDescriptionView {
+public class CourseDescriptionView implements Observer{
 
     //DinnerModel dynamicDescription = new DinnerModel();
     View view;
@@ -27,6 +29,7 @@ public class CourseDescriptionView {
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
+        model.addObserver(this);
 
         result2 = model.getFullMenu();
         for (Dish d : result2) {
@@ -58,4 +61,8 @@ public class CourseDescriptionView {
         // Setup the rest of the view layout
     }
 
+    @Override
+    public void update(Observable observable, Object o) {
+
+    }
 }

@@ -6,7 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class BackButtonView {
+import java.util.Observable;
+import java.util.Observer;
+
+public class BackButtonView implements Observer{
 
     View view;
     DinnerModel model;
@@ -17,10 +20,15 @@ public class BackButtonView {
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
+        model.addObserver(this);
         backButton = (Button) view.findViewById(R.id.back_Button);
         backButton.setText("<---");
 
     }
 
 
+    @Override
+    public void update(Observable observable, Object o) {
+
+    }
 }

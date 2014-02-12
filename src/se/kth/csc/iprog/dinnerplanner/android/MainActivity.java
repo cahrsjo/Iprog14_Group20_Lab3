@@ -2,6 +2,7 @@ package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.android.view.BtnNext;
 import se.kth.csc.iprog.dinnerplanner.android.view.ExampleView;
+import se.kth.csc.iprog.dinnerplanner.android.view.ExampleViewController;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 
 import android.content.Intent;
@@ -25,6 +26,10 @@ public class MainActivity extends Activity {
     	// Creating the view class instance
     	ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id), model);
         BtnNext buttonView = new BtnNext(findViewById(R.id.next_button), model);
+
+        // Creating the view class instance and passing the model
+        ExampleView exampleView = new ExampleView(findViewById(R.id.this_is_example_view_id), model);
+        ExampleViewController exampleCtrl = new ExampleViewController(model, exampleView);
 
         buttonView.nextButton.setOnClickListener(new View.OnClickListener() {
 

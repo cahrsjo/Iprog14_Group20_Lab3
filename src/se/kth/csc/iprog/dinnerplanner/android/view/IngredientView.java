@@ -8,10 +8,12 @@ import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Set;
 import java.util.HashSet;
 
-public class IngredientView {
+public class IngredientView implements Observer{
 
     View view;
     DinnerModel model;
@@ -24,6 +26,7 @@ public class IngredientView {
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
+        model.addObserver(this);
         TextView totalguests = (TextView) view.findViewById(R.id.show_number_of_guests);
         totalguests.setText(model.getNumberOfGuests() + " pers");
 
@@ -49,4 +52,8 @@ public class IngredientView {
         // Setup the rest of the view layout
     }
 
+    @Override
+    public void update(Observable observable, Object o) {
+
+    }
 }
