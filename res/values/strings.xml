@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DinnerPlanner</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="start">Start</string>
+    <string name="create">Create</string>
+    <string name="choose">Choose</string>
+    <string name="welcome">Welcome to Dinner Planner!</string>
+    <string name="starter">Starter</string>
+    <string name="main">Main</string>
+    <string name="dessert">Dessert</string>
+    <string name="choosemenu">Choose Menu</string>
+    <string name="maincourse">Main</string>
+</resources>
