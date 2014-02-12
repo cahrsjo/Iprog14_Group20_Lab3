@@ -57,13 +57,15 @@ public class Menu {
             verticalLayout = new LinearLayout(view.getContext());
             verticalLayout.setOrientation(LinearLayout.VERTICAL);
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)layout.getLayoutParams();
-            params.setMargins(10, 10, 10, 10);
+            params.setMargins(5, 0, 0, 0);
             verticalLayout.setLayoutParams(params);
 
             //Create new ImageView and fill it with the picture from getImage above
             image = new ImageView(view.getContext());
             int resID = view.getResources().getIdentifier(imageFileName, "drawable", view.getContext().getPackageName());
             image.setImageResource(resID);
+            LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(140,140);
+            image.setLayoutParams(params1);
             verticalLayout.addView(image);
 
             //Create new TextView and fill it with the picture's text
