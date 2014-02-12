@@ -32,7 +32,7 @@ public class CourseDescriptionView {
         for (Dish d : result2) {
             type = d.getType();
             if (type==1){
-                dishType = "Starter";
+                dishType = "Menu";
             }
             else if (type==2){
                 dishType = "Main Course";

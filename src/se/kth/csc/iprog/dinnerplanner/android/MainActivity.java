@@ -3,8 +3,11 @@ package se.kth.csc.iprog.dinnerplanner.android;
 import se.kth.csc.iprog.dinnerplanner.android.view.BtnNext;
 import se.kth.csc.iprog.dinnerplanner.android.view.ExampleView;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -23,7 +26,7 @@ public class MainActivity extends Activity {
     	ExampleView mainView = new ExampleView(findViewById(R.id.this_is_example_view_id), model);
         BtnNext buttonView = new BtnNext(findViewById(R.id.next_button), model);
 
-        /**buttonView.nextButton.setOnClickListener(new View.OnClickListener() {
+        buttonView.nextButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -31,7 +34,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
 
-        });**/
+        });
 
 }
 }

@@ -6,8 +6,10 @@ import se.kth.csc.iprog.dinnerplanner.android.view.IngredientView;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.View;
 
 public class Checkout extends Activity {
 
@@ -29,15 +31,15 @@ public class Checkout extends Activity {
 
 
 
-        /**nextButton.setOnClickListener(new View.OnClickListener() {
+        backview.backButton.setOnClickListener(new View.OnClickListener() {
 
-        @Override
-        public void onClick(View v) {
-        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-        startActivity(intent);
-        }
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Checkout.this, ChooseMenu.class);
+                startActivity(intent);
+            }
 
-        });**/
+        });
 
     }
 }

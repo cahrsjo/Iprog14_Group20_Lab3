@@ -10,7 +10,7 @@ public class Dish {
 	public static final int DESERT = 3;
 	
 	String name;
-	int type; // Starter (1), main (2) or desert (3)
+	int type; // Menu (1), main (2) or desert (3)
 	String image;
 	String description;
 	
