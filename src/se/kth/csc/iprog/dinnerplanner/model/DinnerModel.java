@@ -5,7 +5,7 @@ import java.util.Observable;
 import java.util.Set;
 
 public class DinnerModel extends Observable implements IDinnerModel { /****/
-    private int numberOfGuests;
+    private int numberOfGuests=0;
     private Set<Dish> selectedDishes = new HashSet<Dish>();
     private Set<Ingredient> ingredients;
     private float totalPrice;

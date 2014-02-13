@@ -2,8 +2,9 @@ package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.android.view.BtnNext;
 
-import se.kth.csc.iprog.dinnerplanner.android.view.Menu;
 import se.kth.csc.iprog.dinnerplanner.android.view.Participants;
+import se.kth.csc.iprog.dinnerplanner.android.view.ParticipantsController;
+import se.kth.csc.iprog.dinnerplanner.android.view.Menu;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 
@@ -47,6 +48,10 @@ public class ChooseMenu extends Activity {
 
         //Next button
         BtnNext next = new BtnNext(findViewById(R.id.next_button), model);//, model
+
+
+        Participants participantsView = new Participants(findViewById(R.id.participantsLayout), model);
+        ParticipantsController participantsCtrl = new ParticipantsController(model, participantsView);
 
         next.nextButton.setOnClickListener(new View.OnClickListener() {
 

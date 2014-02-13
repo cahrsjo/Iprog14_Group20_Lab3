@@ -13,19 +13,31 @@
         android:layout_gravity="left">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/participantsText"
-            android:autoText="false" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/staticParticipant"/>
 
-        <EditText
-            android:layout_width="55dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/numberParticipants"
-            android:hint="0" />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="-"
+            android:id="@+id/minusButton" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/participantsText"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="+"
+            android:id="@+id/plusButton" />
+
     </LinearLayout>
 
 </LinearLayout>
