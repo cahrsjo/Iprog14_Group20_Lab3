@@ -37,19 +37,6 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
 		dish1.addIngredient(dish1ing4);
 		dish1.addIngredient(dish1ing5);
 		dishes.add(dish1);
-
-        Dish dish4 = new Dish("Sour dough",Dish.STARTER,"sourdough.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
-        Ingredient dish4ing1 = new Ingredient("eggs",0.5,"",1);
-        Ingredient dish4ing2 = new Ingredient("milk",30,"ml",6);
-        Ingredient dish4ing3 = new Ingredient("brown sugar",7,"g",1);
-        Ingredient dish4ing4 = new Ingredient("ground nutmeg",0.5,"g",12);
-        Ingredient dish4ing5 = new Ingredient("white bread",2,"slices",2);
-        dish4.addIngredient(dish4ing1);
-        dish4.addIngredient(dish4ing2);
-        dish4.addIngredient(dish4ing3);
-        dish4.addIngredient(dish4ing4);
-        dish4.addIngredient(dish4ing5);
-        dishes.add(dish4);
 		
 		Dish dish2 = new Dish("Meat balls",Dish.MAIN,"meatballs.jpg","Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.");
 		Ingredient dish2ing1 = new Ingredient("extra lean ground beef",115,"g",20);
@@ -88,6 +75,45 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         dish3.addIngredient(dish3ing4);
         dish3.addIngredient(dish3ing5);
         dishes.add(dish3);
+
+        Dish dish4 = new Dish("meatballs",Dish.STARTER,"meatballs.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
+        Ingredient dish4ing1 = new Ingredient("eggs",0.5,"",1);
+        Ingredient dish4ing2 = new Ingredient("milk",30,"ml",6);
+        Ingredient dish4ing3 = new Ingredient("brown sugar",7,"g",1);
+        Ingredient dish4ing4 = new Ingredient("ground nutmeg",0.5,"g",12);
+        Ingredient dish4ing5 = new Ingredient("white bread",2,"slices",2);
+        dish4.addIngredient(dish4ing1);
+        dish4.addIngredient(dish4ing2);
+        dish4.addIngredient(dish4ing3);
+        dish4.addIngredient(dish4ing4);
+        dish4.addIngredient(dish4ing5);
+        dishes.add(dish4);
+
+        Dish dish5 = new Dish("Sour dough",Dish.MAIN,"sourdough.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
+        Ingredient dish5ing1 = new Ingredient("eggs",0.5,"",1);
+        Ingredient dish5ing2 = new Ingredient("milk",30,"ml",6);
+        Ingredient dish5ing3 = new Ingredient("brown sugar",7,"g",1);
+        Ingredient dish5ing4 = new Ingredient("ground nutmeg",0.5,"g",12);
+        Ingredient dish5ing5 = new Ingredient("white bread",2,"slices",2);
+        dish5.addIngredient(dish5ing1);
+        dish5.addIngredient(dish5ing2);
+        dish5.addIngredient(dish5ing3);
+        dish5.addIngredient(dish5ing4);
+        dish5.addIngredient(dish5ing5);
+        dishes.add(dish5);
+
+        Dish dish6 = new Dish("Baked brie",Dish.DESERT,"bakedbrie.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
+        Ingredient dish6ing1 = new Ingredient("eggs",0.5,"",1);
+        Ingredient dish6ing2 = new Ingredient("milk",30,"ml",6);
+        Ingredient dish6ing3 = new Ingredient("brown sugar",7,"g",1);
+        Ingredient dish6ing4 = new Ingredient("ground nutmeg",0.5,"g",12);
+        Ingredient dish6ing5 = new Ingredient("white bread",2,"slices",2);
+        dish6.addIngredient(dish6ing1);
+        dish6.addIngredient(dish6ing2);
+        dish6.addIngredient(dish6ing3);
+        dish6.addIngredient(dish6ing4);
+        dish6.addIngredient(dish6ing5);
+        dishes.add(dish6);
 
 	}
 	
