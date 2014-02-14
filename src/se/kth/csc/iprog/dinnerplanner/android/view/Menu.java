@@ -68,6 +68,7 @@ public class Menu implements Observer{
             image = new ImageView(view.getContext());
             int resID = view.getResources().getIdentifier(imageFileName, "drawable", view.getContext().getPackageName());
             image.setImageResource(resID);
+            image.setId(resID);
             LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(140,140);
             image.setLayoutParams(params1);
             verticalLayout.addView(image);
