@@ -11,10 +11,16 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ASSERT" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe48236-9188-40d7-a7b4-527b38ff8544" name="Default" comment="" />
+    <list default="true" id="dfe48236-9188-40d7-a7b4-527b38ff8544" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/DinnerModel.java" afterPath="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/DinnerModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/IDinnerModel.java" afterPath="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/IDinnerModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Menu.java" afterPath="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Menu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/MenuController.java" afterPath="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/MenuController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Iprog14_Group20_Lab3.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,60 +83,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChooseMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/ChooseMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="1275">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="participants.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/participants.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="38" selection-start="1075" selection-end="1147" vertical-scroll-proportion="-10.444445" vertical-offset="168" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="total_cost_view.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/total_cost_view.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="66" selection-start="524" selection-end="524" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="number_of_guests.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/number_of_guests.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="360">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Menu.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="51" selection-start="2672" selection-end="2672" vertical-scroll-proportion="0.54626334" vertical-offset="548" max-vertical-offset="1335">
+            <state line="73" column="31" selection-start="2907" selection-end="2907" vertical-scroll-proportion="3.0501392" vertical-offset="0" max-vertical-offset="1545">
               <folding>
-                <element signature="e#700#706#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#657#668#0" expanded="true" />
+                <element signature="e#757#763#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/MenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="85" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDinnerModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/IDinnerModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DinnerModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/DinnerModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3540">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7486#7487#0" expanded="true" />
+                <element signature="e#7519#7520#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dish.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/Dish.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="13" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="355" max-vertical-offset="945">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,7 +148,7 @@
       <file leaf-file-name="DinnerPlannerApplication.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/DinnerPlannerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="5" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+            <state line="11" column="5" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -156,10 +157,8 @@
       <file leaf-file-name="ParticipantsController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/ParticipantsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="34" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="29" column="34" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="660">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,7 +166,7 @@
       <file leaf-file-name="CourseDescriptionView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/CourseDescriptionView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="945">
+            <state line="32" column="0" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1110">
               <folding />
             </state>
           </provider>
@@ -177,9 +176,7 @@
         <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Participants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="44" column="72" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="795">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -205,7 +202,6 @@
         <option value="$PROJECT_DIR$/res/layout/activity_choose.xml" />
         <option value="$PROJECT_DIR$/res/layout/menu_view.xml" />
         <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/TotalCost.java" />
-        <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Menu.java" />
         <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/IngredientView.java" />
         <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/CourseDescriptionView.java" />
         <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/CheckoutImages.java" />
@@ -219,17 +215,20 @@
         <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/ChooseMenu.java" />
         <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/ParticipantsController.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/DinnerModel.java" />
         <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Participants.java" />
         <option value="$PROJECT_DIR$/res/layout/participants.xml" />
         <option value="$PROJECT_DIR$/res/layout/total_cost_view.xml" />
+        <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/IDinnerModel.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Menu.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/DinnerModel.java" />
+        <option value="$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/MenuController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="685" />
+    <option name="width" value="1260" />
+    <option name="height" value="713" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -242,7 +241,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -257,7 +256,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -378,8 +376,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Iprog14_Group20_Lab3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Iprog14_Group20_Lab3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -394,7 +411,11 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="SearchEverywhereHistory" value="clean" />
+    <property name="SearchEverywhereHistory" value="&#10;clean" />
+    <property name="options.lastSelected" value="project.propCompiler" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.Iprog14_Group20_Lab3">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -425,19 +446,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -463,6 +471,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -524,7 +545,7 @@
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
@@ -577,33 +598,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="685" extended-state="6" />
+    <frame x="0" y="22" width="1260" height="713" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6983051" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25862068" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31932774" sideWeight="0.36288998" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25862068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277311" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -625,6 +646,89 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/ChooseMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/participants.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="38" selection-start="1075" selection-end="1147" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/total_cost_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="66" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/number_of_guests.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="51" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1290">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#657#668#0" expanded="true" />
+            <element signature="e#757#763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/DinnerPlannerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="5" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/ParticipantsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="34" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/CourseDescriptionView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Participants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="72" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/ExampleView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
@@ -635,7 +739,11 @@
     <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/DinnerModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="139" column="40" selection-start="6022" selection-end="6022" vertical-scroll-proportion="0.0" vertical-offset="2085" max-vertical-offset="3015">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7486#7487#0" expanded="true" />
+            <element signature="e#7519#7520#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -659,7 +767,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="0" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1335">
           <folding>
-            <element signature="e#700#706#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#657#668#0" expanded="true" />
+            <element signature="e#757#763#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -821,13 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="90" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="555">
@@ -856,28 +959,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/DinnerModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2895">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/ParticipantsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="34" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="660">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Participants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="72" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="795">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,7 +985,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/participants.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="38" selection-start="1075" selection-end="1147" vertical-scroll-proportion="-10.444445" vertical-offset="168" max-vertical-offset="720">
+        <state line="30" column="38" selection-start="1075" selection-end="1147" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
@@ -903,7 +995,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/total_cost_view.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="66" selection-start="524" selection-end="524" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="330">
+        <state line="13" column="66" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
@@ -913,18 +1005,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/ChooseMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="1275">
+        <state line="34" column="0" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/Dish.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/IDinnerModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/model/DinnerModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3540">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#7486#7487#0" expanded="true" />
+            <element signature="e#7519#7520#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="85" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/kth/csc/iprog/dinnerplanner/android/view/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="51" selection-start="2672" selection-end="2672" vertical-scroll-proportion="0.54626334" vertical-offset="548" max-vertical-offset="1335">
+        <state line="73" column="31" selection-start="2907" selection-end="2907" vertical-scroll-proportion="3.0501392" vertical-offset="0" max-vertical-offset="1545">
           <folding>
-            <element signature="e#700#706#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#657#668#0" expanded="true" />
+            <element signature="e#757#763#0" expanded="true" />
           </folding>
         </state>
       </provider>

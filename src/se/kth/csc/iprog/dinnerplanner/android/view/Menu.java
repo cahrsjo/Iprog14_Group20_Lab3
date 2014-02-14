@@ -20,6 +20,7 @@ public class Menu implements Observer{
     String imageFileName;
     String imageName;
     Set<Dish> starters = new HashSet<Dish>();
+    Set<ImageView> imageList = new HashSet<ImageView>();
     Set<Dish> maincourses = new HashSet<Dish>();
     Set<Dish> desserts = new HashSet<Dish>();
     public ImageView image;
@@ -33,6 +34,8 @@ public class Menu implements Observer{
         this.view = view;
         this.model = model;
         model.addObserver(this);
+
+        System.out.println("halloj"); //Looking for the console-messages.. Remove this later!
 
         //Get all dishes
         starters = model.getDishesOfType(1);
@@ -72,6 +75,9 @@ public class Menu implements Observer{
             LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(140,140);
             image.setLayoutParams(params1);
             verticalLayout.addView(image);
+            imageList.add(image);
+
+
 
             //Create new TextView and fill it with the picture's text
             imageTextView = new TextView(view.getContext());

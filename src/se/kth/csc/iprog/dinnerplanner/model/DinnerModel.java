@@ -1,14 +1,20 @@
 package se.kth.csc.iprog.dinnerplanner.model;
 
+
 import java.util.HashSet;
 import java.util.Observable;
 import java.util.Set;
+
+
 
 public class DinnerModel extends Observable implements IDinnerModel { /****/
     private int numberOfGuests=0;
     private Set<Dish> selectedDishes = new HashSet<Dish>();
     private Set<Ingredient> ingredients;
     private float totalPrice;
+    private Dish markedDish;
+    private String id;
+    private Dish dish1;
 
 
     Set<Dish> dishes = new HashSet<Dish>();
@@ -25,7 +31,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
 	public DinnerModel(){
 		
 		//Adding some example data, you can add more
-		Dish dish1 = new Dish("French toast",Dish.STARTER,"toast.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
+		dish1 = new Dish("French toast",Dish.STARTER,"toast.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
 		Ingredient dish1ing1 = new Ingredient("eggs",0.5,"",1);
 		Ingredient dish1ing2 = new Ingredient("milk",30,"ml",6);
 		Ingredient dish1ing3 = new Ingredient("brown sugar",7,"g",1);
@@ -159,6 +165,34 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         return (Dish) result2; /**KORREKT?**/
     }
 
+
+
+    /**
+     * Set the dish that the user has clicked on. It gets a string and compares it to the images for all dishes.
+     * NOT FINISHED!!!!!
+     */
+    public void setMarkedDish(String id) {
+        //Here we have to match the id with the dish and change the marked dish.
+        //Drawable draw = null;
+        //draw = draw.getDrawable(int id);
+        this.id = id;
+        System.out.println(this.id);   //TO DO: See how the resID string is formatted and adjust it to the image string in the Dish object.
+        for (Dish d : selectedDishes){
+        if (d.image == id){
+            markedDish = d;
+        }
+           else {
+            markedDish = dish1; //If the string name doesn't match any of the images...
+        }
+        }
+
+        setChanged();
+        notifyObservers(selectedDishes);
+    }
+
+    public Dish getMarkedDish() {
+        return markedDish;
+    }
 
 
     @Override

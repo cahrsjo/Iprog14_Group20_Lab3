@@ -4,6 +4,7 @@ import android.view.View;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MenuController implements View.OnClickListener {
@@ -14,9 +15,14 @@ public class MenuController implements View.OnClickListener {
         this.model = model;
         this.view = view;
 
+        System.out.println("hejsan"); //Want to find the console.. REMOVE THIS later.
+
+        for (ImageView i : view.imageList){
+            i.setOnClickListener(this);
+        }
+
         // Here we setup the listeners
-        //view.image.findViewById(R.id.menuHeader).setOnClickListener(this);
-        view.image.setOnClickListener(this);
+        //view.image.setOnClickListener(this);
         //view.minusButton.setOnClickListener(this);
     }
 
@@ -28,8 +34,11 @@ public class MenuController implements View.OnClickListener {
     public void onClick(View v) {
 
         if(v == view.image) {
-            // We update the model
-            int id = view.image.getId();
+            int id;
+            id = view.image.getId();
+            String str;
+            str = view.image.getResources().getString(id);
+            model.setMarkedDish(str);             // We update the model
 
         }
         /**if(v == view.minusButton) {
