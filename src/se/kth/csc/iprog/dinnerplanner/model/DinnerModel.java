@@ -140,6 +140,13 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         notifyObservers(numberOfGuests);
     }
 
+    public void setSelectedDishes(Dish d) {
+        //this.selectedDishes = selectedDishes;
+        selectedDishes.add(d);
+        setChanged();
+        notifyObservers(selectedDishes);
+    }
+
     public Dish getSelectedDish(int type) {
         Set<Dish> result2 = new HashSet<Dish>();
         for (Dish d : selectedDishes){

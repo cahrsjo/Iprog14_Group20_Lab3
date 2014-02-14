@@ -60,10 +60,6 @@ public class Menu implements Observer{
             verticalLayout = new LinearLayout(view.getContext());
             verticalLayout.setOrientation(LinearLayout.VERTICAL);
 
-            /**We tried to alter the image sizes with these two lines but it doesn't work...**/
-            //LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(150, 100);
-            //verticalLayout.setLayoutParams(layoutParams);
-
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams)layout.getLayoutParams();
             params.setMargins(5, 0, 0, 0);
             verticalLayout.setLayoutParams(params);
