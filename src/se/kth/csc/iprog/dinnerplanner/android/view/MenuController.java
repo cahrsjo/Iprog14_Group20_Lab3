@@ -28,19 +28,13 @@ public class MenuController implements View.OnClickListener {
         this.view = view;
         //chooseMenuView = view.findViewById(R.id.chooseMenuView);
         //Log.v(TAG, "test utanfor allt");
-<<<<<<< HEAD
         chooseMenuView = view.view.findViewById(R.id.menuview);
-=======
->>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
 
         for (ImageView i : view.imageList){
             Log.v(TAG, "test i for-loop");
             i.setOnClickListener(this);
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
     }
 
     // This is the method of that we need to implement when implementing
@@ -49,27 +43,19 @@ public class MenuController implements View.OnClickListener {
     // about in the lab instructions.
     @Override
     public void onClick(View v) {
-<<<<<<< HEAD
         Log.v(TAG, "HALLÅÅÅÅÅÅÅÅÅÅÅÅÅ" + v);
-=======
         Log.v(TAG, "Går in i onClick i MenuController...");
->>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
         int id;
         id = v.getId();
         String str;
         str = v.getResources().getString(id); // str is on the form "res/drawable/bakedbrie.jpg"
         model.setMarkedDish(str);             // We update the model
         Log.v(TAG, " image: " + str + " id: " + id);
-
-<<<<<<< HEAD
         createPopup(v);
-=======
->>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
 
         //INFLATE THE POPUP
 
         //LayoutInflater layoutInflater = (LayoutInflater)v.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-<<<<<<< HEAD
     }
 
     public void createPopup(View v){
@@ -79,28 +65,16 @@ public class MenuController implements View.OnClickListener {
 
         View popupView = layoutInflater.inflate(R.layout.popup, null);
 
-=======
-
-        LayoutInflater layoutInflater = (LayoutInflater)v.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-
-        View popupView = layoutInflater.inflate(R.layout.popup, null);
-        TextView text = (TextView) v.findViewById(R.id.popupCost);
-        text.setText("asdf...");
->>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
 
         PopupWindow popupWindow = new PopupWindow(
                 popupView,
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
 
-<<<<<<< HEAD
         //chooseMenuView = v.findViewById(R.id.chooseMenuView);
 
         Log.v(TAG, "CHOOSEMENUVIEW: " +chooseMenuView);
-=======
 
->>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
         popupWindow.showAtLocation(chooseMenuView, Gravity.CENTER, 0, 0);
     }
 }

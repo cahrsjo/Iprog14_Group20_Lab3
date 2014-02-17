@@ -71,7 +71,6 @@ public class ChooseMenu extends Activity {
 
         });
 
-<<<<<<< HEAD
 
 
         //ChooseMenu-id från activity_choose.xml för att skicka popupen
@@ -98,9 +97,6 @@ public class ChooseMenu extends Activity {
                 popupWindow.showAtLocation(chooseMenuView, Gravity.CENTER, 0, 0);
             };
         });*/
-=======
 
-
->>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
     }
 }
