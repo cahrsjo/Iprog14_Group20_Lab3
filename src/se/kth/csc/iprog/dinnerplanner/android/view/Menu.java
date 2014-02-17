@@ -5,6 +5,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Observable;
 import java.util.Observer;
@@ -20,7 +21,8 @@ public class Menu implements Observer{
     String imageFileName;
     String imageName;
     Set<Dish> starters = new HashSet<Dish>();
-    Set<ImageView> imageList = new HashSet<ImageView>();
+    //Set<ImageView> imageList = new HashSet<ImageView>();
+    ArrayList<ImageView> imageList = new ArrayList<ImageView>();
     Set<Dish> maincourses = new HashSet<Dish>();
     Set<Dish> desserts = new HashSet<Dish>();
     public ImageView image;
@@ -35,7 +37,6 @@ public class Menu implements Observer{
         this.model = model;
         model.addObserver(this);
 
-        System.out.println("halloj"); //Looking for the console-messages.. Remove this later!
 
         //Get all dishes
         starters = model.getDishesOfType(1);

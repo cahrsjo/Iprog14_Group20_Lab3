@@ -1,6 +1,8 @@
 package se.kth.csc.iprog.dinnerplanner.model;
 
 
+import android.util.Log;
+
 import java.util.HashSet;
 import java.util.Observable;
 import java.util.Set;
@@ -202,6 +204,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         //Drawable draw = null;
         //draw = draw.getDrawable(int id);
         this.id = id;
+
         System.out.println(this.id);   //TO DO: See how the resID string is formatted and adjust it to the image string in the Dish object.
         for (Dish d : selectedDishes){
         if (d.image == id){
@@ -224,7 +227,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
     @Override
     public Set<Dish> getFullMenu() {
 
-        selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
+        //selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
 
         return this.selectedDishes;
 

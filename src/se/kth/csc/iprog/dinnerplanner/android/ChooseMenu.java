@@ -39,7 +39,7 @@ public class ChooseMenu extends Activity {
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost), model);
 
         //Menu menu KLAR
-        Menu initmenu = new Menu(findViewById(R.id.menuview), model);
+        //Menu initmenu = new Menu(findViewById(R.id.menuview), model);
 
         //Main menu TBD
         //MainCourse main = new MainCourse(findViewById(R.id.MainCourse), model);
@@ -71,7 +71,7 @@ public class ChooseMenu extends Activity {
         //ChooseMenu-id från activity_choose.xml för att skicka popupen
         final View chooseMenuView = (View)findViewById(R.id.chooseMenuView);
 
-        initmenu.image.setOnClickListener(new View.OnClickListener(){
+        menuView.image.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 /**POPUP **/
