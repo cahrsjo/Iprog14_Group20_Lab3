@@ -44,7 +44,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
+<<<<<<< HEAD
                     android:text=""
+=======
+
+>>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
                     android:id="@+id/popupCost"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="30dp" />

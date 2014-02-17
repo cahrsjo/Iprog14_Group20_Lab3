@@ -31,8 +31,13 @@ public class Menu implements Observer{
     String imageFileName;
     String imageName;
     Set<Dish> starters = new HashSet<Dish>();
+<<<<<<< HEAD
     //Set<ImageView> imageList = new HashSet<ImageView>();
     ArrayList<ImageView> imageList = new ArrayList<ImageView>();
+=======
+    Set<ImageView> imageList = new HashSet<ImageView>();
+    //ArrayList<ImageView> imageList = new ArrayList<ImageView>();
+>>>>>>> ba98f65da46bbf8eaa7e4c06180997d88cd57351
     Set<Dish> maincourses = new HashSet<Dish>();
     Set<Dish> desserts = new HashSet<Dish>();
     public ImageView image;
@@ -51,7 +56,6 @@ public class Menu implements Observer{
         this.model = model;
         model.addObserver(this);
 
-        System.out.println("halloj"); //Looking for the console-messages.. Remove this later!
 
         //Get all dishes
         starters = model.getDishesOfType(1);
