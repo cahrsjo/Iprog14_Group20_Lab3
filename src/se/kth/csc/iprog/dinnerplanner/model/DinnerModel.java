@@ -227,7 +227,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
     @Override
     public Set<Dish> getFullMenu() {
 
-        //selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
+        selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
 
         return this.selectedDishes;
 

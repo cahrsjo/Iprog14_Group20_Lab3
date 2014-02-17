@@ -9,6 +9,7 @@ import se.kth.csc.iprog.dinnerplanner.android.view.Menu;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
@@ -68,25 +69,7 @@ public class ChooseMenu extends Activity {
 
         });
 
-        //ChooseMenu-id från activity_choose.xml för att skicka popupen
-        final View chooseMenuView = (View)findViewById(R.id.chooseMenuView);
 
-        menuView.image.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                /**POPUP **/
-                LayoutInflater layoutInflater
-                        = (LayoutInflater)getBaseContext()
-                        .getSystemService(LAYOUT_INFLATER_SERVICE);
-                View popupView = layoutInflater.inflate(R.layout.popup, null);
-                final PopupWindow popupWindow = new PopupWindow(
-                        popupView,
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT);
-
-                popupWindow.showAtLocation(chooseMenuView, Gravity.CENTER, 0, 0);
-            };
-        });
 
     }
 }
