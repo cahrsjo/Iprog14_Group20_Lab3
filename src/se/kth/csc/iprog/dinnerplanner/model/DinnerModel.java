@@ -17,6 +17,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
     private Dish markedDish;
     private String id;
     private Dish dish1;
+    private static final String TAG = "MyDinnerModel";
 
 
     Set<Dish> dishes = new HashSet<Dish>();
@@ -203,15 +204,19 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         //Here we have to match the id with the dish and change the marked dish.
         //Drawable draw = null;
         //draw = draw.getDrawable(int id);
+        Log.v(TAG, "HAR GATT IN I setMarkedDish-metoden.");
         this.id = id;
-
-        System.out.println(this.id);   //TO DO: See how the resID string is formatted and adjust it to the image string in the Dish object.
+          //TO DO: See how the resID string is formatted and adjust it to the image string in the Dish object.
         for (Dish d : selectedDishes){
-        if (d.image == id){
+        String idCompare;
+            idCompare = "res/drawable/" + d.image;
+        if (idCompare.equals(this.id)){
             markedDish = d;
+            Log.v(TAG, "HAR GATT IN I idCompare == id! :)");
         }
            else {
-            markedDish = dish1; //If the string name doesn't match any of the images...
+            //markedDish = dish1; //If the string name doesn't match any of the images...
+            Log.v(TAG, "Har gatt in i else. idCompare= " + idCompare + " d.image= " + id);
         }
         }
 
