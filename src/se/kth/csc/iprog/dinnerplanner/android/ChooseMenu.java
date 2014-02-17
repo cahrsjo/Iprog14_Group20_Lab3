@@ -10,6 +10,7 @@ import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Gravity;
@@ -17,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
 public class ChooseMenu extends Activity {
     @Override
@@ -39,7 +41,7 @@ public class ChooseMenu extends Activity {
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost), model);
 
         //Menu menu KLAR
-        Menu initmenu = new Menu(findViewById(R.id.menuview), model);
+        //Menu initmenu = new Menu(findViewById(R.id.menuview), model);
 
         //Main menu TBD
         //MainCourse main = new MainCourse(findViewById(R.id.MainCourse), model);
@@ -68,17 +70,24 @@ public class ChooseMenu extends Activity {
 
         });
 
-        //ChooseMenu-id från activity_choose.xml för att skicka popupen
-        final View chooseMenuView = (View)findViewById(R.id.chooseMenuView);
 
-        initmenu.image.setOnClickListener(new View.OnClickListener(){
+
+        //ChooseMenu-id från activity_choose.xml för att skicka popupen
+        /*final View chooseMenuView = findViewById(R.id.chooseMenuView);
+
+        menuView.image.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                /**POPUP **/
                 LayoutInflater layoutInflater
                         = (LayoutInflater)getBaseContext()
                         .getSystemService(LAYOUT_INFLATER_SERVICE);
+
+
                 View popupView = layoutInflater.inflate(R.layout.popup, null);
+
+
+
+
                 final PopupWindow popupWindow = new PopupWindow(
                         popupView,
                         ViewGroup.LayoutParams.MATCH_PARENT,
@@ -86,7 +95,6 @@ public class ChooseMenu extends Activity {
 
                 popupWindow.showAtLocation(chooseMenuView, Gravity.CENTER, 0, 0);
             };
-        });
-
+        });*/
     }
 }

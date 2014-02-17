@@ -22,6 +22,10 @@ public class PopupView implements Observer {
     DinnerModel model;
     Button chooseButton;
 
+    ImageView popupImage;
+    TextView popupCost;
+    TextView popupCostPerPerson;
+
     public PopupView(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
@@ -30,9 +34,20 @@ public class PopupView implements Observer {
         model.addObserver(this);
         foodName = (TextView) view.findViewById(R.id.foodName);
         participantsView2 = (TextView) view.findViewById(R.id.staticParticipant);
-
         chooseButton = (Button) view.findViewById(R.id.chooseButton);
 
+
+
+
+        popupImage = (ImageView) view.findViewById(R.id.popupImg);
+        //int resID = view.getResources().getIdentifier(popupImage , "drawable", view.getContext().getPackageName());
+        //popupImage.setImageResource(resID);
+
+        popupCost = (TextView) view.findViewById(R.id.popupCost);
+        popupCostPerPerson = (TextView) view.findViewById(R.id.popupCostPerPerson);
+
+        popupCost.setText("Cost: " );
+        popupCostPerPerson.setText("kr/Person");
 
         updateNumberOfGuests();
     }

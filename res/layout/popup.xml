@@ -18,7 +18,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/foodName"
             android:layout_gravity="center_horizontal"
-            android:text="PlaceholderText"
+            android:text=""
             android:layout_marginTop="20dp" />
 
 
@@ -31,7 +31,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/popupImg"
-                android:background="@drawable/toast"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp" />
 
@@ -45,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Cost: 80 kr"
+                    android:text=""
                     android:id="@+id/popupCost"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="30dp" />
@@ -54,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="(20 kr/person)"
+                    android:text=""
                     android:id="@+id/popupCostPerPerson"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp" />

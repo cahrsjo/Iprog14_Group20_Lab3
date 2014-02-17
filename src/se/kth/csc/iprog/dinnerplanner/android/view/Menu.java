@@ -1,14 +1,25 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Set;
+
+import se.kth.csc.iprog.dinnerplanner.android.Checkout;
+import se.kth.csc.iprog.dinnerplanner.android.ChooseMenu;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
@@ -20,7 +31,8 @@ public class Menu implements Observer{
     String imageFileName;
     String imageName;
     Set<Dish> starters = new HashSet<Dish>();
-    Set<ImageView> imageList = new HashSet<ImageView>();
+    //Set<ImageView> imageList = new HashSet<ImageView>();
+    ArrayList<ImageView> imageList = new ArrayList<ImageView>();
     Set<Dish> maincourses = new HashSet<Dish>();
     Set<Dish> desserts = new HashSet<Dish>();
     public ImageView image;
@@ -29,6 +41,10 @@ public class Menu implements Observer{
     public LinearLayout starterLayout;
     public LinearLayout maincourseLayout;
     public LinearLayout dessertLayout;
+    //final View chooseMenuView;
+    int resID;
+
+    private static final String TAG = "MyActivity";
 
     public Menu(View view, DinnerModel model){
         this.view = view;
@@ -51,6 +67,17 @@ public class Menu implements Observer{
         printDishes(starters, starterLayout);
         printDishes(maincourses, maincourseLayout);
         printDishes(desserts, dessertLayout);
+
+
+        //get popupviewplace
+        //chooseMenuView = view.findViewById(R.id.chooseMenuView);
+
+
+
+    }
+
+    public Context getContext(){
+        return view.getContext();
     }
 
     public void printDishes(Set<Dish> dishes, LinearLayout layout){
@@ -69,7 +96,7 @@ public class Menu implements Observer{
 
             //Create new ImageView and fill it with the picture from getImage above
             image = new ImageView(view.getContext());
-            int resID = view.getResources().getIdentifier(imageFileName, "drawable", view.getContext().getPackageName());
+            resID = view.getResources().getIdentifier(imageFileName, "drawable", view.getContext().getPackageName());
             image.setImageResource(resID);
             image.setId(resID);
             LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(140,140);
@@ -84,14 +111,35 @@ public class Menu implements Observer{
             imageTextView.setText(imageName);
             verticalLayout.addView(imageTextView);
 
-            //Add the view to the correct layout
-            layout.addView(verticalLayout);
 
+            //Add onclicklistener to each dish
+            /*image.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Log.v(TAG, "Går in i onClick i setOnClickListener...");
+                    createPopup(v);
+                }
+            });
+            //Add the view to the correct layout*/
+            layout.addView(verticalLayout);
         }
     }
 
+   /* public void createPopup(View v){
+            LayoutInflater layoutInflater = (LayoutInflater)view.getContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            View popupView = layoutInflater.inflate(R.layout.popup, null);
+
+            PopupWindow popupWindow = new PopupWindow(
+                popupView,
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+
+            popupWindow.showAtLocation(chooseMenuView, Gravity.CENTER, 0, 0);
+    }*/
+
     @Override
-    public void update(Observable observable, Object o) {
+    public void update(Observable observable, Object o){
 
     }
 }
