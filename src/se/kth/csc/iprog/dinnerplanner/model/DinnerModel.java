@@ -220,7 +220,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         }
 
         setChanged();
-        notifyObservers(selectedDishes);
+        notifyObservers();
     }
 
     public Dish getMarkedDish() {
