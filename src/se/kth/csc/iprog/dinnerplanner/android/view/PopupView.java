@@ -18,12 +18,11 @@ public class PopupView implements Observer {
 
     View view;
     public TextView foodName;
-    public TextView participantsView2;
+
     DinnerModel model;
     Button chooseButton;
 
-    ImageView popupImage;
-    TextView popupCost;
+    //ImageView popupImage;
     TextView popupCostPerPerson;
 
     public PopupView(View view, DinnerModel model) {
@@ -33,23 +32,20 @@ public class PopupView implements Observer {
         this.model = model;
         model.addObserver(this);
         foodName = (TextView) view.findViewById(R.id.foodName);
-        participantsView2 = (TextView) view.findViewById(R.id.staticParticipant);
-        chooseButton = (Button) view.findViewById(R.id.chooseButton);
+        //chooseButton = (Button) view.findViewById(R.id.chooseButton);
 
 
 
 
-        popupImage = (ImageView) view.findViewById(R.id.popupImg);
+        //popupImage = (ImageView) view.findViewById(R.id.popupImg);
         //int resID = view.getResources().getIdentifier(popupImage , "drawable", view.getContext().getPackageName());
         //popupImage.setImageResource(resID);
 
-        popupCost = (TextView) view.findViewById(R.id.popupCost);
         popupCostPerPerson = (TextView) view.findViewById(R.id.popupCostPerPerson);
 
-        popupCost.setText("Cost: " );
-        popupCostPerPerson.setText("kr/Person");
 
-        updateNumberOfGuests();
+
+        updatePopupContent();
     }
 
     /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!
@@ -59,11 +55,12 @@ public class PopupView implements Observer {
 
     @Override
     public void update(Observable observable, Object o) {
-        updateNumberOfGuests();
+        updatePopupContent();
     }
 
-    private void updateNumberOfGuests() {
-        participantsView2.setText("Participants");
-        //participantsView.setText(" " + model.getNumberOfGuests() + " ");
+    private void updatePopupContent() {
+
+        foodName.setText(" " + model.getMarkedDish().getName() + " ");
+        //popupCostPerPerson.setText(" " + model.getMarkedDish() + " ");
     }
 }

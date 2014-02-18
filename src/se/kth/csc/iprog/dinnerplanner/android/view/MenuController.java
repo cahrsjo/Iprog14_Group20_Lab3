@@ -1,13 +1,15 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
-import android.app.Activity;
 import android.content.Context;
+
+import android.content.Intent;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import se.kth.csc.iprog.dinnerplanner.android.ChooseMenu;
+import se.kth.csc.iprog.dinnerplanner.android.PopupActivity;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.view.View;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 
 public class MenuController implements View.OnClickListener {
     DinnerModel model;
+    //ChooseMenu chooseMenuObject = new ChooseMenu();
     Menu view;
     View chooseMenuView;
 
@@ -43,7 +46,7 @@ public class MenuController implements View.OnClickListener {
     // about in the lab instructions.
     @Override
     public void onClick(View v) {
-        Log.v(TAG, "HALLÅÅÅÅÅÅÅÅÅÅÅÅÅ" + v);
+
         Log.v(TAG, "Går in i onClick i MenuController...");
         int id;
         id = v.getId();
@@ -51,14 +54,18 @@ public class MenuController implements View.OnClickListener {
         str = v.getResources().getString(id); // str is on the form "res/drawable/bakedbrie.jpg"
         model.setMarkedDish(str);             // We update the model
         Log.v(TAG, " image: " + str + " id: " + id);
-        createPopup(v);
-
+        //createPopup(v);
+        //chooseMenuObject.loadPopup();
+        Log.v(TAG, "Går in i loadPopup korrekt!!!");
+        Intent intent = new Intent(v.getContext(), PopupActivity.class);
+        Log.v(TAG, "Går förbi Intent.....");
+        v.getContext().startActivity(intent);
         //INFLATE THE POPUP
 
         //LayoutInflater layoutInflater = (LayoutInflater)v.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    public void createPopup(View v){
+    /**public void createPopup(View v){
         LayoutInflater layoutInflater = (LayoutInflater)view.getContext()
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -76,6 +83,6 @@ public class MenuController implements View.OnClickListener {
         Log.v(TAG, "CHOOSEMENUVIEW: " +chooseMenuView);
 
         popupWindow.showAtLocation(chooseMenuView, Gravity.CENTER, 0, 0);
-    }
+    }**/
 }
 

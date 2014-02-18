@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,15 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 public class ChooseMenu extends Activity {
+    private static final String TAG = "ChooseMenuActivity";
+
+    public void loadPopup() {
+        Log.v(TAG, "Går in i loadPopup korrekt!!!");
+        Intent intent = new Intent(this, PopupActivity.class);
+        Log.v(TAG, "Går förbi Intent.....");
+        startActivity(intent);
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Default call to load previous state
@@ -40,15 +50,6 @@ public class ChooseMenu extends Activity {
 
         // PASS THE MODEL AS A VARIABLE
         TotalCost costView = new TotalCost(findViewById(R.id.total_cost), model);
-
-        //Menu menu KLAR
-        //Menu initmenu = new Menu(findViewById(R.id.menuview), model);
-
-        //Main menu TBD
-        //MainCourse main = new MainCourse(findViewById(R.id.MainCourse), model);
-
-        //Dessert TBD
-        //Desert dess = new Desert(findViewById(R.id.desert), model);
 
         //Next button
         BtnNext next = new BtnNext(findViewById(R.id.next_button), model);//, model
@@ -71,32 +72,7 @@ public class ChooseMenu extends Activity {
 
         });
 
-
-
-        //ChooseMenu-id från activity_choose.xml för att skicka popupen
-        /*final View chooseMenuView = findViewById(R.id.chooseMenuView);
-
-        menuView.image.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                LayoutInflater layoutInflater
-                        = (LayoutInflater)getBaseContext()
-                        .getSystemService(LAYOUT_INFLATER_SERVICE);
-
-
-                View popupView = layoutInflater.inflate(R.layout.popup, null);
-
-
-
-
-                final PopupWindow popupWindow = new PopupWindow(
-                        popupView,
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT);
-
-                popupWindow.showAtLocation(chooseMenuView, Gravity.CENTER, 0, 0);
-            };
-        });*/
-
     }
+
+
 }

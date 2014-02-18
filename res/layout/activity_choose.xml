@@ -38,5 +38,10 @@
         layout="@layout/next_button"
         android:layout_alignParentEnd="true" />
 
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/menu_view" />
+
 
 </LinearLayout>
