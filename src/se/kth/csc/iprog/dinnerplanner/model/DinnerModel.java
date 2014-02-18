@@ -76,13 +76,11 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         Ingredient dish3ing1 = new Ingredient("eggs",0.5,"",1);
         Ingredient dish3ing2 = new Ingredient("milk",30,"ml",6);
         Ingredient dish3ing3 = new Ingredient("brown sugar",7,"g",1);
-        Ingredient dish3ing4 = new Ingredient("ground nutmeg",0.5,"g",12);
-        Ingredient dish3ing5 = new Ingredient("white bread",2,"slices",2);
+
         dish3.addIngredient(dish3ing1);
         dish3.addIngredient(dish3ing2);
         dish3.addIngredient(dish3ing3);
-        dish3.addIngredient(dish3ing4);
-        dish3.addIngredient(dish3ing5);
+
         dishes.add(dish3);
 
         Dish dish4 = new Dish("meatballs",Dish.STARTER,"meatballs.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
@@ -111,7 +109,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         dish5.addIngredient(dish5ing5);
         dishes.add(dish5);
 
-        Dish dish6 = new Dish("Baked brie",Dish.DESERT,"bakedbrie.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
+        Dish dish6 = new Dish("Ice Cream",Dish.DESERT,"icecream.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
         Ingredient dish6ing1 = new Ingredient("eggs",0.5,"",1);
         Ingredient dish6ing2 = new Ingredient("milk",30,"ml",6);
         Ingredient dish6ing3 = new Ingredient("brown sugar",7,"g",1);
@@ -132,18 +130,19 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
     @Override
     public Set<Dish> getFullMenu() {
 
-        //selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
+       /** //selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
         if (selectedDishes.isEmpty()){
-            selectedDishes.add(dish1);
-            //selectedDishes = dishes;
+            //selectedDishes.add(dish1);
+            selectedDishes = dishes;
         }
         //return this.selectedDishes;
-        return selectedDishes;
+        return selectedDishes;**/
+        return dishes;
 
     }
-	public Set<Dish> getDishes(){
-		return dishes;
-	}
+	/**public Set<Dish> getSelectedDishes(){
+        return selectedDishes;
+	}**/
 	
 	/**
 	 * Returns the set of dishes of specific type. (1 = Menu, 2 = main, 3 = desert).
@@ -208,6 +207,8 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
 
 
 
+
+
     /**
      * Set the dish that the user has clicked on. It gets a string and compares it to the images for all dishes.
      */
@@ -260,13 +261,17 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
 
     @Override
     public float getTotalMenuPrice() {
+            if (selectedDishes.isEmpty()){
+                totalPrice=0;
+            }
+        else{
 
-            for (Dish d : selectedDishes){
+             for (Dish d : selectedDishes){
                 for (Ingredient i : d.getIngredients()){
                 totalPrice = totalPrice + (float) i.getPrice()*numberOfGuests;
                 }
             }
-
+            }
         return totalPrice;
     }
 

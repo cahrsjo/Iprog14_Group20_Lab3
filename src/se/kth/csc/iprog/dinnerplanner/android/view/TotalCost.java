@@ -18,26 +18,28 @@ public class TotalCost implements Observer {
     //DinnerModel dynamicPrice = new DinnerModel();
     View view;
     DinnerModel model;
-    //Set<Dish> getTheMenu = new HashSet<Dish>();
+    public TextView totalcost;
+
     public TotalCost(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
         model.addObserver(this);
-        //getTheMenu = model.getFullMenu();
 
-        TextView totalcost = (TextView) view.findViewById(R.id.display_total_cost);
-        //totalcost.setText("Total cost " + dynamicPrice.getTotalMenuPrice() + " kr");
-        totalcost.setText("Total cost " + model.getTotalMenuPrice() + " kr");
+        totalcost = (TextView) view.findViewById(R.id.display_total_cost);
 
-
-
+        updateCost();
         // Setup the rest of the view layout
     }
 
     @Override
     public void update(Observable observable, Object o) {
+        updateCost();
+    }
 
+    public void updateCost(){
+
+        totalcost.setText("Total cost " + model.getTotalMenuPrice() + " kr");
     }
 }
