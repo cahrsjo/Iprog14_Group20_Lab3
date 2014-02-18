@@ -18,14 +18,14 @@ public class TotalCost implements Observer {
     //DinnerModel dynamicPrice = new DinnerModel();
     View view;
     DinnerModel model;
-    Set<Dish> getTheMenu = new HashSet<Dish>();
+    //Set<Dish> getTheMenu = new HashSet<Dish>();
     public TotalCost(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
         this.view = view;
         this.model = model;
         model.addObserver(this);
-        getTheMenu = model.getFullMenu();
+        //getTheMenu = model.getFullMenu();
 
         TextView totalcost = (TextView) view.findViewById(R.id.display_total_cost);
         //totalcost.setText("Total cost " + dynamicPrice.getTotalMenuPrice() + " kr");

@@ -7,6 +7,7 @@ import se.kth.csc.iprog.dinnerplanner.android.view.MenuController;
 import se.kth.csc.iprog.dinnerplanner.android.view.Participants;
 import se.kth.csc.iprog.dinnerplanner.android.view.ParticipantsController;
 import se.kth.csc.iprog.dinnerplanner.android.view.Menu;
+import se.kth.csc.iprog.dinnerplanner.android.view.PopupController;
 import se.kth.csc.iprog.dinnerplanner.android.view.PopupView;
 import se.kth.csc.iprog.dinnerplanner.android.view.TotalCost;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
@@ -41,6 +42,7 @@ public class PopupActivity extends Activity {
         //MenuController menuCtrl = new MenuController(model, menuView);
 
         PopupView popup = new PopupView(findViewById(R.id.showPopupWindow), model);
+        PopupController popupCtrl = new PopupController(model, popup);
 
         ChooseButton choose = new ChooseButton(findViewById(R.id.choose_button), model);
 

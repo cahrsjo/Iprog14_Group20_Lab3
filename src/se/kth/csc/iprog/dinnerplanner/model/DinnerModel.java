@@ -129,6 +129,18 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
 	/**
 	 * Returns the set of dishes of specific type. (1 = Menu, 2 = main, 3 = desert).
 	 */
+    @Override
+    public Set<Dish> getFullMenu() {
+
+        //selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
+        if (selectedDishes.isEmpty()){
+            selectedDishes.add(dish1);
+            //selectedDishes = dishes;
+        }
+        //return this.selectedDishes;
+        return selectedDishes;
+
+    }
 	public Set<Dish> getDishes(){
 		return dishes;
 	}
@@ -228,14 +240,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
     }
 
 
-    @Override
-    public Set<Dish> getFullMenu() {
 
-        selectedDishes = dishes; // CHANGE THIS LATER TO WHAT IS ACTUALLY CHOSEN!!!!!!!!!!
-
-        return this.selectedDishes;
-
-    }
 
 
     public Set<Ingredient> getAllIngredients() {

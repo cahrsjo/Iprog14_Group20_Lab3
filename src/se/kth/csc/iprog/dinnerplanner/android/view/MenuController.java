@@ -65,24 +65,6 @@ public class MenuController implements View.OnClickListener {
         //LayoutInflater layoutInflater = (LayoutInflater)v.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    /**public void createPopup(View v){
-        LayoutInflater layoutInflater = (LayoutInflater)view.getContext()
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-
-        View popupView = layoutInflater.inflate(R.layout.popup, null);
-
-
-        PopupWindow popupWindow = new PopupWindow(
-                popupView,
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT);
-
-        //chooseMenuView = v.findViewById(R.id.chooseMenuView);
-
-        Log.v(TAG, "CHOOSEMENUVIEW: " +chooseMenuView);
-
-        popupWindow.showAtLocation(chooseMenuView, Gravity.CENTER, 0, 0);
-    }**/
 }
 

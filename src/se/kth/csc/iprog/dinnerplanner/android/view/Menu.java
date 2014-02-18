@@ -31,9 +31,7 @@ public class Menu implements Observer{
     String imageFileName;
     String imageName;
     Set<Dish> starters = new HashSet<Dish>();
-    //Set<ImageView> imageList = new HashSet<ImageView>();
     Set<ImageView> imageList = new HashSet<ImageView>();
-    //ArrayList<ImageView> imageList = new ArrayList<ImageView>();
     Set<Dish> maincourses = new HashSet<Dish>();
     Set<Dish> desserts = new HashSet<Dish>();
     public ImageView image;

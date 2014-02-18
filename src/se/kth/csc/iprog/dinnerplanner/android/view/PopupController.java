@@ -1,8 +1,15 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.View;
+
+import se.kth.csc.iprog.dinnerplanner.android.ChooseMenu;
+import se.kth.csc.iprog.dinnerplanner.android.PopupActivity;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
+import se.kth.csc.iprog.dinnerplanner.model.Dish;
+
 import android.view.View;
 import android.widget.TextView;
 
@@ -26,16 +33,15 @@ public class PopupController implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        v=view.chooseButton;
-        //model.setSelectedDishes();
-/**
-        if(v == view.plusButton) {
-            // We update the model
-            model.setNumberOfGuests(model.getNumberOfGuests() + 1);
+        if (v==view.chooseButton) {
+            Dish d = model.getMarkedDish();
+            model.setSelectedDishes(d);
+            Intent intent = new Intent(v.getContext(), ChooseMenu.class);
+            v.getContext().startActivity(intent);
         }
-        if(v == view.minusButton) {
-            // We update the model
-            model.setNumberOfGuests(model.getNumberOfGuests() - 1);
+
+        /**if (v==view.cancelButton){
+
         }**/
     }
 
