@@ -34,7 +34,7 @@ public class MenuController implements View.OnClickListener {
         chooseMenuView = view.view.findViewById(R.id.menuview);
 
         for (ImageView i : view.imageList){
-            Log.v(TAG, "test i for-loop");
+           // Log.v(TAG, "test i for-loop");
             i.setOnClickListener(this);
         }
 
@@ -47,7 +47,7 @@ public class MenuController implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        Log.v(TAG, "Går in i onClick i MenuController...");
+        //Log.v(TAG, "Går in i onClick i MenuController...");
         int id;
         id = v.getId();
         String str;
@@ -56,9 +56,9 @@ public class MenuController implements View.OnClickListener {
         Log.v(TAG, " image: " + str + " id: " + id);
         //createPopup(v);
         //chooseMenuObject.loadPopup();
-        Log.v(TAG, "Går in i loadPopup korrekt!!!");
+        //Log.v(TAG, "Går in i loadPopup korrekt!!!");
         Intent intent = new Intent(v.getContext(), PopupActivity.class);
-        Log.v(TAG, "Går förbi Intent.....");
+        //Log.v(TAG, "Går förbi Intent.....");
         v.getContext().startActivity(intent);
         //INFLATE THE POPUP
 

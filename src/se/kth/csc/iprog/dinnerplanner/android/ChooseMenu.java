@@ -25,13 +25,6 @@ import android.widget.TextView;
 public class ChooseMenu extends Activity {
     private static final String TAG = "ChooseMenuActivity";
 
-    public void loadPopup() {
-        Log.v(TAG, "Går in i loadPopup korrekt!!!");
-        Intent intent = new Intent(this, PopupActivity.class);
-        Log.v(TAG, "Går förbi Intent.....");
-        startActivity(intent);
-
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Default call to load previous state

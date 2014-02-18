@@ -34,5 +34,5 @@ public interface IDinnerModel {
 	/**
 	 * Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	 */
-	public float getTotalMenuPrice();
+	public double getTotalMenuPrice();
 }

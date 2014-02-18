@@ -46,7 +46,7 @@ public class PopupActivity extends Activity {
 
         ChooseButton choose = new ChooseButton(findViewById(R.id.choose_button), model);
 
-        choose.chooseButton.setOnClickListener(new View.OnClickListener() {
+       /* choose.chooseButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -54,7 +54,7 @@ public class PopupActivity extends Activity {
                 startActivity(intent);
             }
 
-        });
+        }); */
 
 
 

@@ -13,7 +13,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
     private int numberOfGuests=0;
     private Set<Dish> selectedDishes = new HashSet<Dish>();
     private Set<Ingredient> ingredients;
-    private float totalPrice;
+    private double totalPrice;
     private Dish markedDish;
     private String id;
     private Dish dish1;
@@ -83,7 +83,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
 
         dishes.add(dish3);
 
-        Dish dish4 = new Dish("meatballs",Dish.STARTER,"meatballs.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
+       /* Dish dish4 = new Dish("meatballs",Dish.STARTER,"meatballs.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
         Ingredient dish4ing1 = new Ingredient("eggs",0.5,"",1);
         Ingredient dish4ing2 = new Ingredient("milk",30,"ml",6);
         Ingredient dish4ing3 = new Ingredient("brown sugar",7,"g",1);
@@ -94,9 +94,9 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         dish4.addIngredient(dish4ing3);
         dish4.addIngredient(dish4ing4);
         dish4.addIngredient(dish4ing5);
-        dishes.add(dish4);
+        dishes.add(dish4); */
 
-        Dish dish5 = new Dish("Sour dough",Dish.MAIN,"sourdough.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
+        Dish dish5 = new Dish("Sour dough",Dish.STARTER,"sourdough.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
         Ingredient dish5ing1 = new Ingredient("eggs",0.5,"",1);
         Ingredient dish5ing2 = new Ingredient("milk",30,"ml",6);
         Ingredient dish5ing3 = new Ingredient("brown sugar",7,"g",1);
@@ -109,6 +109,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         dish5.addIngredient(dish5ing5);
         dishes.add(dish5);
 
+        /*
         Dish dish6 = new Dish("Ice Cream",Dish.DESERT,"icecream.jpg","In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.");
         Ingredient dish6ing1 = new Ingredient("eggs",0.5,"",1);
         Ingredient dish6ing2 = new Ingredient("milk",30,"ml",6);
@@ -120,7 +121,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         dish6.addIngredient(dish6ing3);
         dish6.addIngredient(dish6ing4);
         dish6.addIngredient(dish6ing5);
-        dishes.add(dish6);
+        dishes.add(dish6);*/
 
 	}
 	
@@ -188,9 +189,10 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
 
     public void setSelectedDishes(Dish d) {
         //this.selectedDishes = selectedDishes;
+        Log.v(TAG, "Har gatt in i setSelectedDishes");
         selectedDishes.add(d);
         setChanged();
-        notifyObservers(selectedDishes);
+        notifyObservers();
     }
 
     public Dish getSelectedDish(int type) {
@@ -218,7 +220,7 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         Log.v(TAG, "HAR GATT IN I setMarkedDish-metoden.");
         this.id = id;
 
-        for (Dish d : selectedDishes){
+        for (Dish d : dishes){
             String idCompare;
             idCompare = "res/drawable/" + d.image;
             if (idCompare.equals(this.id)){
@@ -260,15 +262,22 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
 
 
     @Override
-    public float getTotalMenuPrice() {
+    public double getTotalMenuPrice() {
+
+        //Log.v(TAG, "Har gatt in i getTotalMenuPrice");
             if (selectedDishes.isEmpty()){
+                Log.v(TAG, "Har gatt in i selectedDishes.isEmpty");
                 totalPrice=0;
+                Log.v(TAG, "Total Price är: " + totalPrice);
             }
         else{
-
+             totalPrice = 0;
+             Log.v(TAG, "Har gatt in i else...");
              for (Dish d : selectedDishes){
+                 Log.v(TAG, "d.getName= " + d.getName());
                 for (Ingredient i : d.getIngredients()){
-                totalPrice = totalPrice + (float) i.getPrice()*numberOfGuests;
+                    Log.v(TAG, "i.getPrice är: " + i.getPrice());
+                totalPrice = totalPrice + i.getPrice()*numberOfGuests;
                 }
             }
             }

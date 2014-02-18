@@ -4,6 +4,7 @@ import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -14,13 +15,15 @@ import java.util.Set;
 
 public class TotalCost implements Observer {
 
-
+    private static final String TAG = "MyTotalCost";
     //DinnerModel dynamicPrice = new DinnerModel();
     View view;
     DinnerModel model;
     public TextView totalcost;
 
     public TotalCost(View view, DinnerModel model) {
+
+        Log.v(TAG, "ENTERING TOTAL COST!");
 
         // store in the class the reference to the Android View
         this.view = view;
@@ -41,5 +44,6 @@ public class TotalCost implements Observer {
     public void updateCost(){
 
         totalcost.setText("Total cost " + model.getTotalMenuPrice() + " kr");
+        Log.v(TAG, "Har gått in i updateCost och hämtat från modellen.");
     }
 }

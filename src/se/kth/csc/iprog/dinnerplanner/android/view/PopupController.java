@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class PopupController implements View.OnClickListener {
     DinnerModel model;
     PopupView view;
+    private static final String TAG = "MyPopupController";
 
     public PopupController (DinnerModel model, PopupView view ) {
         this.model = model;
@@ -33,7 +34,9 @@ public class PopupController implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
+        Log.v(TAG, "Är inne i onClick i POPUPCONTROLLER.");
         if (v==view.chooseButton) {
+            Log.v(TAG, "Är inne i v==view.chooseButton");
             Dish d = model.getMarkedDish();
             model.setSelectedDishes(d);
             Intent intent = new Intent(v.getContext(), ChooseMenu.class);

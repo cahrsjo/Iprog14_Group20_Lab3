@@ -74,11 +74,12 @@ public class PopupView implements Observer {
         popupImage.setImageResource(resID);
 
 
-        popupCost.setText(" " + model.getTotalMenuPrice() + " kr");
+
 
         for (Ingredient i : model.getMarkedDish().getIngredients()){
             ingredientPrice = ingredientPrice + i.getPrice();
         }
+        popupCost.setText(" " + ingredientPrice * model.getNumberOfGuests() + " kr");
         popupCostPerPerson.setText(" " + ingredientPrice + " kr/pers");
 
     }
