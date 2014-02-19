@@ -71,25 +71,10 @@
             android:layout_marginTop="30dp"
             android:background="#800000"
             android:layout_marginBottom="30dp" />-->
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-
         <include
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            layout="@layout/choose_button"
-            android:layout_gravity="right"
-            android:layout_marginLeft="300dp" />
-
-        <include
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            layout="@layout/cancel_button"
-            android:layout_gravity="left" />
-        </RelativeLayout>
+            layout="@layout/choose_button" />
 
         <TableRow
             android:layout_width="match_parent"
