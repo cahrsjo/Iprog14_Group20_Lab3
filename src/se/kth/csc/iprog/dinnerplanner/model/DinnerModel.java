@@ -141,9 +141,10 @@ public class DinnerModel extends Observable implements IDinnerModel { /****/
         return dishes;
 
     }
-	/**public Set<Dish> getSelectedDishes(){
+
+    public Set<Dish> getSelectedDishes(){
         return selectedDishes;
-	}**/
+	}
 	
 	/**
 	 * Returns the set of dishes of specific type. (1 = Menu, 2 = main, 3 = desert).

@@ -2,7 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:weightSum="1"
     android:id="@+id/image_view">
 
@@ -20,50 +20,37 @@
         android:layout_marginRight="67dp"
         android:layout_marginTop="49dp" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/desertLayout"
-        android:focusable="false">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_below="@+id/desertLayout"
-            android:layout_toRightOf="@+id/desertLayout">
-
-        </LinearLayout>
-
-
-    </LinearLayout>
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/smallImg"
-        android:layout_below="@+id/instructions"
-        android:layout_alignLeft="@+id/dishName"
-        android:layout_alignStart="@+id/dishName" />
-
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/smallImg2"
-        android:src="@drawable/icecream"
-        android:layout_below="@+id/instructions"
-        android:layout_alignLeft="@+id/instructions"
-        android:layout_alignStart="@+id/instructions" />
-
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/smallImg3"
-        android:background="#FF0000"
-        android:layout_alignTop="@+id/smallImg2"
+        android:id="@+id/dessertImage"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/maincourseImage"
+        android:layout_alignParentRight="true"
         android:layout_alignRight="@+id/instructions"
         android:layout_alignEnd="@+id/instructions" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/maincourseImage"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/instructions"
+        android:layout_toLeftOf="@id/dessertImage"
+         />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/starterImage"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/maincourseImage"
+        android:layout_below="@+id/instructions"
+        android:layout_centerHorizontal="true" />
+    <!--android:src="@drawable/icecream"-->
+
 
     <ImageView
         android:layout_width="50dp"
@@ -75,38 +62,35 @@
         android:layout_toRightOf="@+id/desertLayout" />
 
     <TextView
-        android:id="@+id/dishName3"
-        android:text=""
+        android:id="@+id/dishName2"
+
         android:textSize="5pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:layout_below="@+id/smallImg3"
-        android:layout_alignLeft="@+id/smallImg3"
-        android:layout_alignStart="@+id/smallImg3"
-        android:layout_alignRight="@+id/smallImg3"
-        android:layout_alignEnd="@+id/smallImg3" />
+        android:layout_below="@+id/starterImage"
+        android:layout_toRightOf="@+id/starterImage" />
 
     <TextView
-        android:id="@+id/dishName2"
-        android:text="Icecream"
+        android:id="@+id/dishName3"
+
         android:textSize="5pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:layout_alignTop="@+id/dishName3"
-        android:layout_alignRight="@+id/smallImg2"
-        android:layout_alignEnd="@+id/smallImg2" />
+        android:layout_below="@+id/dessertImage"
+        android:layout_alignRight="@+id/dessertImage"
+        android:layout_alignEnd="@+id/dessertImage" />
 
     <TextView
         android:id="@+id/dishName"
-        android:text="Icecream"
+
         android:textSize="5pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:layout_below="@+id/smallImg"
-        android:layout_toLeftOf="@+id/smallImg2" />
+        android:layout_below="@+id/starterImage"
+        android:layout_toLeftOf="@+id/maincourseImage" />
 
     <TextView
         android:id="@+id/ingLabel"

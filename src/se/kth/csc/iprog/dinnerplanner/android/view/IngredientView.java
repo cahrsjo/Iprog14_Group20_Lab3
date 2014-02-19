@@ -36,14 +36,14 @@ public class IngredientView implements Observer{
         TextView ingredientlist = (TextView) view.findViewById(R.id.ingredient_list);
 
 
-        getTheMenu = model.getFullMenu();
+        //getTheMenu = model.getFullMenu();
         resultsBack = model.getAllIngredients();
 
         if (resultsBack.isEmpty()){
             string = "it is empty...";
         }
        for (Ingredient i : resultsBack) {
-           string = string + i.getName() + "        " + i.getQuantity() + " " + i.getUnit() + "\n";
+           string = string + i.getName() + " " + i.getQuantity() + " " + i.getUnit() + "\n";
         }
 
 

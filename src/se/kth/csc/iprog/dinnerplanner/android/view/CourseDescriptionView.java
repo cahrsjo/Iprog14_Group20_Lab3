@@ -5,6 +5,7 @@ import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,12 +19,12 @@ public class CourseDescriptionView implements Observer{
     //DinnerModel dynamicDescription = new DinnerModel();
     View view;
     DinnerModel model;
-    int type = 0;
-    String dishType = "ASDADASDASD";
-    String name = "sdfs";
-    String description = "asdasdas";
-    Set<Dish> result2 = new HashSet<Dish>();
 
+    String dishType =" ";
+    String name = " ";
+    String description = " ";
+    Set<Dish> resultsBack = new HashSet<Dish>();
+    private static final String TAG = "myCOURSEDESCRIPTIONVIEW";
     public CourseDescriptionView(View view, DinnerModel model) {
 
         // store in the class the reference to the Android View
@@ -31,30 +32,41 @@ public class CourseDescriptionView implements Observer{
         this.model = model;
         model.addObserver(this);
 
-        result2 = model.getFullMenu();
-        for (Dish d : result2) {
-            type = d.getType();
-            if (type==1){
-                dishType = "Menu";
+        resultsBack = model.getSelectedDishes();
+        for (Dish d : resultsBack) {
+            Log.v(TAG, "Går in i for loopen");
+            if (d.getType()==1){
+                Log.v(TAG, "dish type är 1");
+                dishType = "Starter";
             }
-            else if (type==2){
+            else if (d.getType()==2){
+                Log.v(TAG, "dish type är 2");
                 dishType = "Main Course";
             }
             else {
-                dishType = "Desert";
+                Log.v(TAG, "dish type är 3");
+                dishType = "Dessert";
             }
             name = d.getName();
+            Log.v(TAG, "namnet är satt");
             description = d.getDescription();
+            Log.v(TAG, "beskrivningen är satt");
         }
 
         TextView courseTitle = (TextView) view.findViewById(R.id.show_course_type);
-        courseTitle.setText(dishType);
+        Log.v(TAG, "hämtar titeln från viewn");
+        //courseTitle.setText(" " + dishType + " ");
+        courseTitle.setText("course title goes here");
 
         TextView courseName = (TextView) view.findViewById(R.id.show_course_name);
-        courseName.setText(name);
+        Log.v(TAG, "hämtar titeln från viewn");
+        //courseName.setText(" " + name + " ");
+        courseTitle.setText("course name goes here");
 
         TextView courseDescription = (TextView) view.findViewById(R.id.show_course_description);
-        courseDescription.setText(description);
+        Log.v(TAG, "hämtar titeln från viewn");
+        //courseDescription.setText(" " + description + " ");
+        courseDescription.setText("course description goes here");
 
 
 

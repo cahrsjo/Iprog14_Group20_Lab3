@@ -24,7 +24,8 @@ public class CheckoutImages implements Observer{
     DinnerModel model;
     String imageString;
     String dishName;
-    Set<Dish> result2 = new HashSet<Dish>();
+    Set<Dish> resultsBack = new HashSet<Dish>();
+    Set<ImageView> checkoutImages = new HashSet<ImageView>();
     //Set<Dish> getSelectedDishes = new HashSet<Dish>();
     public CheckoutImages(View view, DinnerModel model) {
 
@@ -32,31 +33,62 @@ public class CheckoutImages implements Observer{
         this.view = view;
         this.model = model;
         model.addObserver(this);
-        //getSelectedDishes = model.getSelectedDishes(); FIX THIS LATER!
 
-        result2 = model.getFullMenu();
+        resultsBack = model.getSelectedDishes();
 
-        for (Dish d : result2) {
+        for (Dish d : resultsBack) {
             imageString = d.getImage();
             dishName = d.getName();
 
-        }
+            if (d.getType() == 1){
+                if (imageString.indexOf(".") > 0){
+                    imageString = imageString.substring(0, imageString.lastIndexOf("."));
+                }
 
-        if (imageString.indexOf(".") > 0){
-            imageString = imageString.substring(0, imageString.lastIndexOf("."));
+                TextView dname = (TextView) view.findViewById(R.id.dishName);
+                dname.setText(dishName);
+
+                /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
+                ImageView image1 = (ImageView) view.findViewById(R.id.starterImage);
+                int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
+                image1.setImageResource(resID);
+                checkoutImages.add(image1);
+            }
+
+            if (d.getType() == 2){
+                if (imageString.indexOf(".") > 0){
+                    imageString = imageString.substring(0, imageString.lastIndexOf("."));
+                }
+
+                TextView dname = (TextView) view.findViewById(R.id.dishName2);
+                dname.setText(dishName);
+
+                /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
+                ImageView image2 = (ImageView) view.findViewById(R.id.maincourseImage);
+                int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
+                image2.setImageResource(resID);
+                checkoutImages.add(image2);
+            }
+
+            if (d.getType() == 3){
+                if (imageString.indexOf(".") > 0){
+                    imageString = imageString.substring(0, imageString.lastIndexOf("."));
+                }
+
+                TextView dname = (TextView) view.findViewById(R.id.dishName3);
+                dname.setText(dishName);
+
+                /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
+                ImageView image3 = (ImageView) view.findViewById(R.id.dessertImage);
+                int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
+                image3.setImageResource(resID);
+                checkoutImages.add(image3);
+            }
+
         }
         TextView test = (TextView) view.findViewById(R.id.instructions);
         test.setText("Instructrions");
 
-        TextView dname = (TextView) view.findViewById(R.id.dishName);
-        dname.setText(dishName);
-
-
-
-        /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
-        ImageView image = (ImageView) view.findViewById(R.id.smallImg);
-        int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
-        image.setImageResource(resID);
 
         // Setup the rest of the view layout
     }
