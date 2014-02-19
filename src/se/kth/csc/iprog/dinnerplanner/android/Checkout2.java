@@ -24,6 +24,7 @@ public class Checkout2 extends Activity {
 
         // Creating the view class instance
 <<<<<<< HEAD
+<<<<<<< HEAD
         TotalCost mainView = new TotalCost(findViewById(R.id.total_cost), model);
         //IngredientView ingview = new IngredientView(findViewById(R.id.ingredient_view), model);
 =======
@@ -35,6 +36,14 @@ public class Checkout2 extends Activity {
         CourseDescriptionView courseview = new CourseDescriptionView(findViewById(R.id.course_description_view), model);
         CheckoutController checkoutCtrl = new CheckoutController(model, images);
 =======
+        TotalCost mainView = new TotalCost(findViewById(R.id.total_cost), model);
+
+
+>>>>>>> fa6337f37a6e727d327eb601032d84f780231bf8
+=======
+        CourseDescriptionView courseview = new CourseDescriptionView(findViewById(R.id.course_description_view), model);
+        BackButtonView backview = new BackButtonView(findViewById(R.id.back_button), model);
+        CheckoutImages images = new CheckoutImages(findViewById(R.id.image_view), model);
         TotalCost mainView = new TotalCost(findViewById(R.id.total_cost), model);
 
 

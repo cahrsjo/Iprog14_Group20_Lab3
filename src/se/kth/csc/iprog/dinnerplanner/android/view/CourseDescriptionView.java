@@ -31,6 +31,7 @@ public class CourseDescriptionView implements Observer{
         this.model = model;
         model.addObserver(this);
 <<<<<<< HEAD
+<<<<<<< HEAD
         // TODO: This loads meatballs all the time... how to fix it??????
         resultsBack = model.getSelectedDishes();
         for (Dish d : resultsBack) {
@@ -84,6 +85,23 @@ public class CourseDescriptionView implements Observer{
 
 
 =======
+=======
+
+        result2 = model.getFullMenu();
+        for (Dish d : result2) {
+            type = d.getType();
+            if (type==1){
+                dishType = "Menu";
+            }
+            else if (type==2){
+                dishType = "Main Course";
+            }
+            else {
+                dishType = "Desert";
+            }
+            name = d.getName();
+            description = d.getDescription();
+>>>>>>> fa6337f37a6e727d327eb601032d84f780231bf8
         }
 
         TextView courseTitle = (TextView) view.findViewById(R.id.show_course_type);
@@ -94,6 +112,9 @@ public class CourseDescriptionView implements Observer{
 
         TextView courseDescription = (TextView) view.findViewById(R.id.show_course_description);
         courseDescription.setText(description);
+<<<<<<< HEAD
+>>>>>>> fa6337f37a6e727d327eb601032d84f780231bf8
+=======
 >>>>>>> fa6337f37a6e727d327eb601032d84f780231bf8
 
 
