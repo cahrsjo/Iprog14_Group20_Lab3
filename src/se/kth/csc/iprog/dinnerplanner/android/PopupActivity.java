@@ -3,6 +3,7 @@ package se.kth.csc.iprog.dinnerplanner.android;
 import se.kth.csc.iprog.dinnerplanner.android.view.BtnNext;
 
 import se.kth.csc.iprog.dinnerplanner.android.view.ChooseButton;
+import se.kth.csc.iprog.dinnerplanner.android.view.CancelButton;
 import se.kth.csc.iprog.dinnerplanner.android.view.MenuController;
 import se.kth.csc.iprog.dinnerplanner.android.view.Participants;
 import se.kth.csc.iprog.dinnerplanner.android.view.ParticipantsController;
@@ -45,6 +46,7 @@ public class PopupActivity extends Activity {
         PopupController popupCtrl = new PopupController(model, popup);
 
         ChooseButton choose = new ChooseButton(findViewById(R.id.choose_button), model);
+        CancelButton cancel = new CancelButton(findViewById(R.id.cancel_button), model);
 
        /* choose.chooseButton.setOnClickListener(new View.OnClickListener() {
 
