@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
+import se.kth.csc.iprog.dinnerplanner.android.Checkout2;
 import se.kth.csc.iprog.dinnerplanner.android.ChooseMenu;
 import se.kth.csc.iprog.dinnerplanner.android.PopupActivity;
 import se.kth.csc.iprog.dinnerplanner.android.R;
@@ -11,20 +12,25 @@ import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class PopupController implements View.OnClickListener {
+public class CheckoutController implements View.OnClickListener {
     DinnerModel model;
-    PopupView view;
-    private static final String TAG = "MyPopupController";
+    CheckoutImages view;
+    View test;
+    private static final String TAG = "MyCheckoutController";
 
-    public PopupController (DinnerModel model, PopupView view ) {
+    public CheckoutController (DinnerModel model, CheckoutImages view ) {
         this.model = model;
         this.view = view;
+        test = view.view.findViewById(R.id.image_view);
 
         // Here we setup the listeners
-        view.chooseButton.setOnClickListener(this);
-        view.cancelButton.setOnClickListener(this);
+        for (ImageView i : view.checkoutImages){
+            // Log.v(TAG, "test i for-loop");
+            i.setOnClickListener(this);
+        }
         //view.minusButton.setOnClickListener(this);
     }
 
@@ -34,20 +40,13 @@ public class PopupController implements View.OnClickListener {
     // about in the lab instructions.
     @Override
     public void onClick(View v) {
+        Log.v(TAG, "Är inne i onClick i CHECKOUTCONTROLLER.");
+        Intent intent = new Intent(v.getContext(), Checkout2.class);// TODO: Something wrong in Checkout2 atm...
+        v.getContext().startActivity(intent);
 
-        Log.v(TAG, "Är inne i onClick i POPUPCONTROLLER.");
-        if (v==view.chooseButton) {
-            Log.v(TAG, "Är inne i v==view.chooseButton");
-            Dish d = model.getMarkedDish();
-            model.setSelectedDishes(d);
-            Intent intent = new Intent(v.getContext(), ChooseMenu.class);
-            v.getContext().startActivity(intent);
-        }
 
-        if (v==view.cancelButton){
-            Intent intent = new Intent(v.getContext(), ChooseMenu.class);
-            v.getContext().startActivity(intent);
-        }
+
+
     }
 
 }
