@@ -25,8 +25,8 @@ public class ExampleView implements Observer{
 		example = (TextView) view.findViewById(R.id.example_text);
 
 
-        //plusButton = (Button) view.findViewById(R.id.plusButton);
-        //minusButton = (Button) view.findViewById(R.id.minusButton);
+        plusButton = (Button) view.findViewById(R.id.plusButton);
+        minusButton = (Button) view.findViewById(R.id.minusButton);
 		// Setup the rest of the view layout
 
         doStuff();

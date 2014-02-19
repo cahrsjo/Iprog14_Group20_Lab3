@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 
         // Creating the view class instance and passing the model
         ExampleView exampleView = new ExampleView(findViewById(R.id.this_is_example_view_id), model);
-        //ExampleViewController exampleCtrl = new ExampleViewController(model, exampleView);
+        ExampleViewController exampleCtrl = new ExampleViewController(model, exampleView);
 
         buttonView.nextButton.setOnClickListener(new View.OnClickListener() {
 

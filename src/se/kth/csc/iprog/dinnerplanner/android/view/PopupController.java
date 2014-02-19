@@ -24,7 +24,6 @@ public class PopupController implements View.OnClickListener {
 
         // Here we setup the listeners
         view.chooseButton.setOnClickListener(this);
-        view.cancelButton.setOnClickListener(this);
         //view.minusButton.setOnClickListener(this);
     }
 
@@ -44,10 +43,9 @@ public class PopupController implements View.OnClickListener {
             v.getContext().startActivity(intent);
         }
 
-        if (v==view.cancelButton){
-            Intent intent = new Intent(v.getContext(), ChooseMenu.class);
-            v.getContext().startActivity(intent);
-        }
+        /**if (v==view.cancelButton){
+
+        }**/
     }
 
 }

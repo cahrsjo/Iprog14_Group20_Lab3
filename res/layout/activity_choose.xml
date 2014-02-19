@@ -38,7 +38,9 @@
         layout="@layout/next_button"
         android:layout_alignParentEnd="true" />
 
-
-
-
+    <!--<include
+        android:id="@+id/popup"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        layout="@layout/popup" />-->
 </LinearLayout>

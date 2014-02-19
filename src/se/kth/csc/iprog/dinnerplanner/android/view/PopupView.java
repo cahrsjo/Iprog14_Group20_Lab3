@@ -27,7 +27,6 @@ public class PopupView implements Observer {
     public double totalIngredientPrice = 0;
     DinnerModel model;
     Button chooseButton;
-    Button cancelButton;
 
     public TextView popupCostPerPerson;
     public TextView popupCost;
@@ -41,12 +40,12 @@ public class PopupView implements Observer {
         this.model = model;
         model.addObserver(this);
         foodName = (TextView) view.findViewById(R.id.foodName);
+        //chooseButton = (Button) view.findViewById(R.id.chooseButton);
 
 
         popupCost = (TextView) view.findViewById(R.id.popupCost);
         popupCostPerPerson = (TextView) view.findViewById(R.id.popupCostPerPerson);
         chooseButton = (Button) view.findViewById(R.id.choose_Button);
-        cancelButton = (Button) view.findViewById(R.id.cancel_Button);
 
 
 
