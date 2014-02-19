@@ -22,13 +22,13 @@ public class Checkout2 extends Activity {
 
         // Set the view for the main activity screen
         // it must come before any call to findViewById method
-        setContentView(R.layout.activity_checkout);
+        setContentView(R.layout.activity_checkout2);
         DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 
         // Creating the view class instance
         CourseDescriptionView courseview = new CourseDescriptionView(findViewById(R.id.course_description_view), model);
         TotalCost mainView = new TotalCost(findViewById(R.id.total_cost), model);
-        IngredientView ingview = new IngredientView(findViewById(R.id.ingredient_view), model);
+        //IngredientView ingview = new IngredientView(findViewById(R.id.ingredient_view), model);
         BackButtonView backview = new BackButtonView(findViewById(R.id.back_button), model);
 
         CheckoutImages images = new CheckoutImages(findViewById(R.id.image_view), model);

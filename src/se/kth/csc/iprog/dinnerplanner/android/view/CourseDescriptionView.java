@@ -55,18 +55,18 @@ public class CourseDescriptionView implements Observer{
 
         TextView courseTitle = (TextView) view.findViewById(R.id.show_course_type);
         Log.v(TAG, "hämtar titeln från viewn");
-        //courseTitle.setText(" " + dishType + " ");
-        courseTitle.setText("course title goes here");
+        courseTitle.setText(" " + dishType + " ");
+        //courseTitle.setText("course title goes here");
 
         TextView courseName = (TextView) view.findViewById(R.id.show_course_name);
         Log.v(TAG, "hämtar titeln från viewn");
-        //courseName.setText(" " + name + " ");
-        courseTitle.setText("course name goes here");
+        courseName.setText(" " + name + " ");
+        //courseTitle.setText("course name goes here");
 
         TextView courseDescription = (TextView) view.findViewById(R.id.show_course_description);
         Log.v(TAG, "hämtar titeln från viewn");
-        //courseDescription.setText(" " + description + " ");
-        courseDescription.setText("course description goes here");
+        courseDescription.setText(" " + description + " ");
+        //courseDescription.setText("course description goes here");
 
 
 
