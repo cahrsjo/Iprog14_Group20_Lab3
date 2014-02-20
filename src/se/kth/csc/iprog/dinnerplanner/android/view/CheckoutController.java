@@ -18,13 +18,13 @@ import android.widget.TextView;
 public class CheckoutController implements View.OnClickListener {
     DinnerModel model;
     CheckoutImages view;
-    View test;
+
     private static final String TAG = "MyCheckoutController";
 
     public CheckoutController (DinnerModel model, CheckoutImages view ) {
         this.model = model;
         this.view = view;
-        test = view.view.findViewById(R.id.image_view);
+
 
         // Here we setup the listeners
         for (ImageView i : view.checkoutImages){

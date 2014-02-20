@@ -38,6 +38,6 @@ public class ExampleView implements Observer{
     }
 
     private void doStuff() {
-        example.setText("Welcome to Dinner Planner!" + '\n' + '\n' + "Here you will be able to plan your dinner."+ '\n' + '\n' + model.getNumberOfGuests());
+        example.setText("Welcome to Dinner Planner!" + '\n' + '\n' + "Here you will be able to plan your dinner.");
     }
 }

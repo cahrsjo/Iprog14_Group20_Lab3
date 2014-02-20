@@ -20,9 +20,9 @@ public class CourseDescriptionView implements Observer{
     View view;
     DinnerModel model;
 
-    String dishType =" ";
-    String name = " ";
-    String description = " ";
+    String dishType;
+    String name;
+    String description;
     Set<Dish> resultsBack = new HashSet<Dish>();
     private static final String TAG = "myCOURSEDESCRIPTIONVIEW";
     public CourseDescriptionView(View view, DinnerModel model) {
@@ -33,40 +33,50 @@ public class CourseDescriptionView implements Observer{
         model.addObserver(this);
 
         resultsBack = model.getSelectedDishes();
+
         for (Dish d : resultsBack) {
+            dishType = " ";
+            name = " ";
+            description = " ";
             Log.v(TAG, "Går in i for loopen");
             if (d.getType()==1){
                 Log.v(TAG, "dish type är 1");
                 dishType = "Starter";
             }
-            else if (d.getType()==2){
+            if (d.getType()==2){
                 Log.v(TAG, "dish type är 2");
                 dishType = "Main Course";
             }
-            else {
+            if (d.getType()==3) {
                 Log.v(TAG, "dish type är 3");
                 dishType = "Dessert";
             }
+
             name = d.getName();
             Log.v(TAG, "namnet är satt");
             description = d.getDescription();
             Log.v(TAG, "beskrivningen är satt");
+
+            TextView courseTitle = (TextView) view.findViewById(R.id.show_course_type);
+            Log.v(TAG, "hämtar TITELN från viewn");
+            courseTitle.setText(" ");
+            courseTitle.setText(" " + dishType + " ");
+
+
+            TextView courseName = (TextView) view.findViewById(R.id.show_course_name);
+            Log.v(TAG, "hämtar NAMNET från viewn");
+            courseName.setText(" ");
+            courseName.setText(" " + name + " ");
+
+
+            TextView courseDescription = (TextView) view.findViewById(R.id.show_course_description);
+            Log.v(TAG, "hämtar BESKRIVNINGEN från viewn");
+            courseDescription.setText(" ");
+            courseDescription.setText(" " + description + " ");
         }
 
-        TextView courseTitle = (TextView) view.findViewById(R.id.show_course_type);
-        Log.v(TAG, "hämtar titeln från viewn");
-        courseTitle.setText(" " + dishType + " ");
-        //courseTitle.setText("course title goes here");
 
-        TextView courseName = (TextView) view.findViewById(R.id.show_course_name);
-        Log.v(TAG, "hämtar titeln från viewn");
-        courseName.setText(" " + name + " ");
-        //courseTitle.setText("course name goes here");
 
-        TextView courseDescription = (TextView) view.findViewById(R.id.show_course_description);
-        Log.v(TAG, "hämtar titeln från viewn");
-        courseDescription.setText(" " + description + " ");
-        //courseDescription.setText("course description goes here");
 
 
 

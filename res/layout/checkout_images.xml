@@ -49,7 +49,7 @@
         android:layout_toLeftOf="@id/maincourseImage"
         android:layout_below="@+id/instructions"
         android:layout_centerHorizontal="true" />
-    <!--android:src="@drawable/icecream"-->
+
 
 
     <ImageView
@@ -57,7 +57,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/smallIngredientImg"
-        android:src="@drawable/bakedbrie"
+        android:background="#00FF00"
         android:layout_below="@+id/instructions"
         android:layout_toRightOf="@+id/desertLayout" />
 

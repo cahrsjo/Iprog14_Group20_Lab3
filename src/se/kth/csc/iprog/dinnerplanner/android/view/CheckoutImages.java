@@ -48,7 +48,7 @@ public class CheckoutImages implements Observer{
                 TextView dname = (TextView) view.findViewById(R.id.dishName);
                 dname.setText(dishName);
 
-                /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
+
                 ImageView image1 = (ImageView) view.findViewById(R.id.starterImage);
                 int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
                 image1.setImageResource(resID);
@@ -63,7 +63,6 @@ public class CheckoutImages implements Observer{
                 TextView dname = (TextView) view.findViewById(R.id.dishName2);
                 dname.setText(dishName);
 
-                /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
                 ImageView image2 = (ImageView) view.findViewById(R.id.maincourseImage);
                 int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
                 image2.setImageResource(resID);
@@ -78,7 +77,6 @@ public class CheckoutImages implements Observer{
                 TextView dname = (TextView) view.findViewById(R.id.dishName3);
                 dname.setText(dishName);
 
-                /** THIS IS HOW WE DO WHEN WE DO THE IMAGE DONE!**/
                 ImageView image3 = (ImageView) view.findViewById(R.id.dessertImage);
                 int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
                 image3.setImageResource(resID);
