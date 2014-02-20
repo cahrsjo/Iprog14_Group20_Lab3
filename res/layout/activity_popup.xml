@@ -5,6 +5,31 @@
     android:layout_height="wrap_content"
     android:id="@+id/popupActivityView">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/popup_participants" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            layout="@layout/total_cost_view" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        </LinearLayout>
+
     <include
         android:layout_width="match_parent"
         android:layout_height="300dp"
