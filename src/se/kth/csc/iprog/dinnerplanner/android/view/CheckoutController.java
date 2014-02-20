@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
+import se.kth.csc.iprog.dinnerplanner.android.Checkout;
 import se.kth.csc.iprog.dinnerplanner.android.Checkout2;
 import se.kth.csc.iprog.dinnerplanner.android.ChooseMenu;
 import se.kth.csc.iprog.dinnerplanner.android.PopupActivity;
@@ -18,13 +19,16 @@ import android.widget.TextView;
 public class CheckoutController implements View.OnClickListener {
     DinnerModel model;
     CheckoutImages view;
-
+    View ingredientImage;
     private static final String TAG = "MyCheckoutController";
 
     public CheckoutController (DinnerModel model, CheckoutImages view ) {
         this.model = model;
         this.view = view;
+        ingredientImage = view.view.findViewById(R.id.image_view);
 
+        ingredientImage = ingredientImage.findViewById(R.id.smallIngredientImg);
+        ingredientImage.setOnClickListener(this);
 
         // Here we setup the listeners
         for (ImageView i : view.checkoutImages){
@@ -40,10 +44,16 @@ public class CheckoutController implements View.OnClickListener {
     // about in the lab instructions.
     @Override
     public void onClick(View v) {
-        Log.v(TAG, "Är inne i onClick i CHECKOUTCONTROLLER.");
-        Intent intent = new Intent(v.getContext(), Checkout2.class);// TODO: Something wrong in Checkout2 atm...
-        v.getContext().startActivity(intent);
 
+        if (v==ingredientImage){
+            Intent intent = new Intent(v.getContext(), Checkout.class);// TODO: Something wrong in Checkout2 atm...
+            v.getContext().startActivity(intent);
+        }
+
+        else{
+            Intent intent = new Intent(v.getContext(), Checkout2.class);// TODO: Something wrong in Checkout2 atm...
+            v.getContext().startActivity(intent);
+        }
 
 
 
