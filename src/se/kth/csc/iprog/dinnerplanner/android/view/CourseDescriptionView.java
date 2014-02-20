@@ -23,6 +23,7 @@ public class CourseDescriptionView implements Observer{
     String dishType;
     String name;
     String description;
+    Dish d;
     Set<Dish> resultsBack = new HashSet<Dish>();
     private static final String TAG = "myCOURSEDESCRIPTIONVIEW";
     public CourseDescriptionView(View view, DinnerModel model) {
@@ -32,9 +33,44 @@ public class CourseDescriptionView implements Observer{
         this.model = model;
         model.addObserver(this);
 
-        resultsBack = model.getSelectedDishes();
+        d=model.getMarkedDish();
+        if (d.getType()==3){
 
-        for (Dish d : resultsBack) {
+            dishType = "Dessert";
+            Log.v(TAG, "in i tredje if-satsen" + dishType);
+        }
+        if (d.getType()==2){
+
+            dishType = "Main Course";
+            Log.v(TAG, "in i andra if-satsen" + dishType);
+        }
+        if (d.getType()==1){
+
+            dishType = "Starter";
+            Log.v(TAG, "in i första if-satsen" + dishType);
+        }
+
+
+
+        name=d.getName();
+        description=d.getDescription();
+
+        TextView courseTitle = (TextView) view.findViewById(R.id.show_course_type);
+        Log.v(TAG, "hämtar TITELN från viewn");
+        courseTitle.setText(" " + dishType + " ");
+
+
+        TextView courseName = (TextView) view.findViewById(R.id.show_course_name);
+        Log.v(TAG, "hämtar NAMNET från viewn");
+        courseName.setText(" " + name + " ");
+
+
+        TextView courseDescription = (TextView) view.findViewById(R.id.show_course_description);
+        Log.v(TAG, "hämtar BESKRIVNINGEN från viewn");
+        courseDescription.setText(" " + description + " ");
+        //resultsBack = model.getSelectedDishes();
+
+        /**for (Dish d : resultsBack) {
             dishType = " ";
             name = " ";
             description = " ";
@@ -73,7 +109,7 @@ public class CourseDescriptionView implements Observer{
             Log.v(TAG, "hämtar BESKRIVNINGEN från viewn");
             courseDescription.setText(" ");
             courseDescription.setText(" " + description + " ");
-        }
+        }**/
 
 
 

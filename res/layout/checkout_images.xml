@@ -27,7 +27,7 @@
         android:layout_height="50dp"
         android:id="@+id/dessertImage"
         android:layout_marginRight="10dp"
-        android:layout_alignBottom="@+id/maincourseImage"
+        android:layout_below="@+id/instructions"
         android:layout_alignParentRight="true"
         android:layout_alignRight="@+id/instructions"
         android:layout_alignEnd="@+id/instructions" />
@@ -38,7 +38,7 @@
         android:id="@+id/maincourseImage"
         android:layout_marginRight="10dp"
         android:layout_below="@+id/instructions"
-        android:layout_toLeftOf="@id/dessertImage"
+        android:layout_marginLeft="235dp"
          />
 
     <ImageView
@@ -46,8 +46,8 @@
         android:layout_height="50dp"
         android:id="@+id/starterImage"
         android:layout_marginRight="10dp"
-        android:layout_toLeftOf="@id/maincourseImage"
         android:layout_below="@+id/instructions"
+        android:layout_marginLeft="205dp"
         android:layout_centerHorizontal="true" />
 
 
@@ -59,7 +59,7 @@
         android:id="@+id/smallIngredientImg"
         android:background="#00FF00"
         android:layout_below="@+id/instructions"
-        android:layout_toRightOf="@+id/desertLayout" />
+        />
 
     <TextView
         android:id="@+id/dishName2"
@@ -67,9 +67,9 @@
         android:textSize="5pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_below="@+id/starterImage"
-        android:layout_toRightOf="@+id/starterImage" />
+        android:layout_marginLeft="235dp"
+        android:layout_below="@+id/smallIngredientImg"
+        />
 
     <TextView
         android:id="@+id/dishName3"
@@ -77,10 +77,12 @@
         android:textSize="5pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_below="@+id/dessertImage"
-        android:layout_alignRight="@+id/dessertImage"
-        android:layout_alignEnd="@+id/dessertImage" />
+        android:layout_below="@+id/smallIngredientImg"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/instructions"
+        android:layout_alignEnd="@+id/instructions"
+         />
 
     <TextView
         android:id="@+id/dishName"
@@ -88,9 +90,8 @@
         android:textSize="5pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_below="@+id/starterImage"
-        android:layout_toLeftOf="@+id/maincourseImage" />
+        android:layout_below="@+id/smallIngredientImg"
+        android:layout_marginLeft="155dp" />
 
     <TextView
         android:id="@+id/ingLabel"

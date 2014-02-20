@@ -46,11 +46,19 @@ public class CheckoutController implements View.OnClickListener {
     public void onClick(View v) {
 
         if (v==ingredientImage){
-            Intent intent = new Intent(v.getContext(), Checkout.class);// TODO: Something wrong in Checkout2 atm...
+            Intent intent = new Intent(v.getContext(), Checkout.class);
             v.getContext().startActivity(intent);
         }
 
-        else{
+        else {
+            int id;
+            id = v.getId();
+            String str;
+            str = v.getResources().getString(id); // str is on the form "res/drawable/bakedbrie.jpg"
+            model.setMarkedDish(str);             // We update the model
+
+            Log.v(TAG, "Är inne i onClick i checkoutcontroller."+ " " + str + " " + id);
+
             Intent intent = new Intent(v.getContext(), Checkout2.class);// TODO: Something wrong in Checkout2 atm...
             v.getContext().startActivity(intent);
         }

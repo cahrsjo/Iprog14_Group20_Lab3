@@ -50,8 +50,9 @@ public class CheckoutImages implements Observer{
 
 
                 ImageView image1 = (ImageView) view.findViewById(R.id.starterImage);
-                int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
-                image1.setImageResource(resID);
+                int resID1 = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
+                image1.setImageResource(resID1);
+                image1.setId(resID1);
                 checkoutImages.add(image1);
             }
 
@@ -64,8 +65,9 @@ public class CheckoutImages implements Observer{
                 dname.setText(dishName);
 
                 ImageView image2 = (ImageView) view.findViewById(R.id.maincourseImage);
-                int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
-                image2.setImageResource(resID);
+                int resID2 = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
+                image2.setImageResource(resID2);
+                image2.setId(resID2);
                 checkoutImages.add(image2);
             }
 
@@ -78,8 +80,9 @@ public class CheckoutImages implements Observer{
                 dname.setText(dishName);
 
                 ImageView image3 = (ImageView) view.findViewById(R.id.dessertImage);
-                int resID = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
-                image3.setImageResource(resID);
+                int resID3 = view.getResources().getIdentifier(imageString , "drawable", ((Activity)view.getContext()).getPackageName());
+                image3.setImageResource(resID3);
+                image3.setId(resID3);
                 checkoutImages.add(image3);
             }
 
