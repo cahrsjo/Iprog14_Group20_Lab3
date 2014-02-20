@@ -39,6 +39,16 @@ public class PopupActivity extends Activity {
         // INSTANTIATE THE MODEL HERE !!!!!!!!!
         DinnerModel model = ((DinnerPlannerApplication) this.getApplication()).getModel();
 
+
+        Participants participantsView = new Participants(findViewById(R.id.popupParticipantsLayout), model);
+        //ParticipantsController participantsCtrl = new ParticipantsController(model, participantsView);
+
+
+        // PASS THE MODEL AS A VARIABLE
+        TotalCost costView = new TotalCost(findViewById(R.id.total_cost), model);
+
+
+
         //Menu menuView = new Menu(findViewById(R.id.menuview), model);
         //MenuController menuCtrl = new MenuController(model, menuView);
 
